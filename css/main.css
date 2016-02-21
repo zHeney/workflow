@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+
+html{
+	min-height: 100%;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#353b42+0,23262b+100 */
+    background: #202128; /* Old browsers */
+    background: -moz-linear-gradient(top,  #353b42 0%, #23262b 100%);
+    background: -webkit-linear-gradient(top,  #353b42 0%,#23262b 100%);
+    background: linear-gradient(to bottom,  #353b42 0%,#23262b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353b42', endColorstr='#23262b',GradientType=0 ); /* IE6-9 */
+
+}
+
+body{
+	background-image: url(../img/background.png);
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#353b42+0,23262b+100&0+0,1+100 */
+background: -webkit-linear-gradient(top,  rgba(53,59,66,0) 56%, #0A0A0A 100%), url(../img/background.png);
+  background: -moz-linear-gradient(top,  rgba(53,59,66,0) 56%,  #0A0A0A 100%), url(../img/background.png);
+  background: linear-gradient(to bottom,  rgba(53,59,66,0) 56%, #0A0A0A 100%), url(../img/background.png);
+
+}
+#wrapTests{
+	font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+	height: 1000px;
+	max-width: 980px;
+	margin: 0 auto;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#202128+0,121216+100 */
+background: #202128; /* Old browsers */
+background: -moz-linear-gradient(top,  #202128 0%, #121216 100%);
+background: -webkit-linear-gradient(top,  #202128 0%,#121216 100%);
+background: linear-gradient(to bottom,  #202128 0%,#121216 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202128', endColorstr='#121216',GradientType=0 );
+
+
+}
+	#wrapTests a{
+		color: #322929;
+		text-decoration: none;
+	}
+	#wrapTests a div{
+		height: 115px;
+		margin-bottom: 10px;
+		width: 100%;
+		text-align: center;
+		transition: 0.4s ease-out;
+	    box-shadow: inset 0px 0px 106px #702323, 0px 10px 10px #251C1C;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e04747+0,b33838+6,b33838+93,6d3630+100 */
+background: #e04747; /* Old browsers */
+background: -moz-linear-gradient(top,  #e04747 0%, #b33838 6%, #b33838 93%, #6d3630 100%);
+background: -webkit-linear-gradient(top,  #e04747 0%,#b33838 6%,#b33838 93%,#6d3630 100%);
+background: linear-gradient(to bottom,  #e04747 0%,#b33838 6%,#b33838 93%,#6d3630 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e04747', endColorstr='#6d3630',GradientType=0 );
+
+
+	}
+	#wrapTests a:first-child div{ /*g*/
+		color: #262B31;
+
+	}		#wrapTests a:first-child div:hover{ /*g*/
+			color: #353b42;
+			box-shadow:  inset 0px 0px 50px #702323, 0px 10px 10px #251C1C;
+		}
+
+	#wrapTests a:nth-child(2) div{ /*k*/
+		color: #262B31;
+
+	}
+		#wrapTests a:nth-child(2) div:hover{ /*k*/
+			color: #353b42;
+			box-shadow: inset 0px 0px 50px #702323, 0px 10px 10px #251C1C;
+		}
+	#wrapTests a div h1{
+	    text-shadow: 0px 1px 0px #DC4545;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	#wrapTests a div h1:before{
+		height: 100%;
+		content:'';
+		display: inline-block;
+		vertical-align: middle;
+	}

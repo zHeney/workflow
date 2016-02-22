@@ -529,10 +529,12 @@ th {
   content: "\e078";
 }
 .glyphicon-chevron-left:before {
-  content: "\e079";
+  /*content: "\e079";*/
+  content: url(../img/arrLeft-white.png);
 }
 .glyphicon-chevron-right:before {
-  content: "\e080";
+  /*content: "\e080";*/
+  content: url(../img/arrRight-white.png);
 }
 .glyphicon-plus-sign:before {
   content: "\e081";
@@ -1114,6 +1116,10 @@ figure {
 }
 img {
   vertical-align: middle;
+}
+.dropdown-menu img, .btn-primary img{
+  vertical-align: text-top;
+  margin-right: 6px;
 }
 .img-responsive,
 .thumbnail > img,
@@ -6381,19 +6387,19 @@ button.close {
 .carousel-control .glyphicon-chevron-left,
 .carousel-control .glyphicon-chevron-right {
   position: absolute;
-  top: 50%;
+  top: 39%;
   z-index: 5;
   display: inline-block;
   margin-top: -10px;
 }
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {
-  left: 50%;
+  left: 30px;
   margin-left: -10px;
 }
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-right {
-  right: 50%;
+  right: 30px;
   margin-right: -10px;
 }
 .carousel-control .icon-prev,

@@ -1,88 +1,167 @@
 @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+@font-face {
+    font-family: Squares;
+    src: url(../fonts/squares.otf);
+}
+html, body {height: 100%;}
 
-html{
-	height: 100%;
+
+body,p,hr,h1,h2,h3,h4,h5{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body{
-	background-image: url(../img/background.png);
-	height: 100%;
-	margin: 0;
-	padding: 0;
+    background: #272B33;
+	/*background-image: url(../img/background.png);*/
 }
 
-#flower{
-	position: absolute;
-	height: 483px;
-	width: 100%;
-    background: url(../img/shutterflower.png) center 40px no-repeat;
-}
-#blim{
-	position: absolute;
-	height: 100px;
-	width: 100px;
-	background: red;
-	top: 200px;
-	left: 50%;
-    margin-left: -50px;
 
-    -webkit-animation-name: blim;
-    -webkit-animation-duration: 8s;
-    -webkit-animation-iteration-count: infinite;
-    animation-name: blim;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes blim {
-    0%   {background-color:#17171C;}
-    40%   {background-color:#17171C;}
-    60%   {background-color:#44D3FF; /*blue*/ }
-    85%  {background-color:#44D3FF; /*blue*/ }
-    100% {background-color:#17171C;}
-}
-
-@keyframes blim {
-    0%   {background-color:#17171C;}
-    40%   {background-color:#17171C;}
-    60%   {background-color:#44D3FF; /*blue*/ }
-    85%  {background-color:#44D3FF; /*blue*/ }
-    100% {background-color:#17171C;}
-}
-
-#bodient{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	/* http://colorzilla.com/gradient-editor/#353b42+0,23262b+100&0+0,1+100 */
-	background: -webkit-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #090909 100%);
-	  background: linear-gradient(to bottom,  rgba(32, 33, 40, 0) 50%, #090909 100%);
-	   background: -moz-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #090909 100%);
-}
-#wrapTests{
+header{	height: 100%;}
+header, #container{
+	background: #202127;
 	position: relative;
-	font-family: 'Luckiest Guy', cursive;
-	font-size: 20px;
-	/* height: 100%; */
+
 	max-width: 980px;
 	margin: 0 auto;
-    box-shadow: 0px -12px 43px rgba(173, 53, 53, 0.81), inset 0 0 3px #A50000;
-	/* http://colorzilla.com/gradient-editor/#202128+0,121216+100 */
-	background: #202128;/* Old browsers */
+	/*box-shadow: 0px 12px 43px rgba(173, 53, 53, 0.81);*/
+
+	border-right: 1px solid #22252C;
+	border-left: 1px solid #22252C;
+
+	background: -webkit-linear-gradient(top,  #202128 0%, #17171C 100%);
+	background: linear-gradient(to bottom,  #202128 0%, #17171C 100%);
+	background: -moz-linear-gradient(top,  #202128 0%, #17171C 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202128', endColorstr='#121216',GradientType=0 );
+}
+
+
+	#mainImg{
+		height: 75%;
+	    max-height: 483px;
+		width: 100%;
+		position: absolute;
+		top: 7%;
+		z-index: 0;
+	}
+		@media screen and (min-height: 850px){
+			#mainImg{
+				z-index: 2;
+			}
+		}
+	#flower{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	    background: url(../img/shutterflower.png) center center no-repeat;
+        background-size: contain;
+	}
+	#blim{
+        position: absolute;
+    	height: 50px;
+    	width: 50px;
+    	background: #44D3FF;
+    	top: 50%;
+    	margin-top: -38px;
+    	left: 50%;
+    	margin-left: -25px;
+    	z-index: -1;
+
+	    -webkit-animation-name: blim;
+	    -webkit-animation-duration: 8s;
+	    -webkit-animation-iteration-count: infinite;
+	    animation-name: blim;
+	    animation-duration: 8s;
+	    animation-iteration-count: infinite;
+	}
+
+	@-webkit-keyframes blim {
+	    0%   {background-color:#17171C;}
+	    40%   {background-color:#17171C;}
+	    60%   {background-color:#44D3FF; /*blue*/ }
+	    85%  {background-color:#44D3FF; /*blue*/ }
+	    100% {background-color:#17171C;}
+	}
+
+	@keyframes blim {
+	    0%   {background-color:#17171C;}
+	    40%   {background-color:#17171C;}
+	    60%   {background-color:#44D3FF; /*blue*/ }
+	    85%  {background-color:#44D3FF; /*blue*/ }
+	    100% {background-color:#17171C;}
+	}
+
+
+#workflow {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    bottom: 80px;
+}
+	#city{
+	    background: url(../img/city.png) 0 bottom no-repeat;
+        background-size: contain;
+		position: absolute;
+		height: 319px;
+		width: 100%;
+		bottom: 16%;
+		margin-bottom: 120px;
+		z-index: 1;
+	}
+		#workflow hr{
+            border: 0;
+            height: 1px;
+
+            background: -moz-linear-gradient(left,  rgb(23, 23, 28) 0%, rgba(100,100,100,1) 50%, rgb(23, 23, 28) 100%);
+            background: -webkit-linear-gradient(left,  rgb(23, 23, 28) 0%,rgba(100,100,100,1) 50%,rgb(23, 23, 28) 100%);
+	        background: linear-gradient(to right, rgb(23, 23, 28) 0%,rgba(100,100,100,1) 50%,rgb(23, 23, 28) 100%)
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00646464', endColorstr='#00646464',GradientType=1 );
+    	}
+		#workflow>p{
+			overflow: hidden;
+		    padding-bottom: 10px;
+	        background: url(../img) 0px 0px no-repeat, #17171C;
+    		color: #272B33;;
+    		font-size: 113px;
+    		font-family: Squares;
+    		text-align: center;
+			text-shadow:
+						0 1px 0 #6A6A6A,
+			            0 2px 0 #4D4D4D,
+			            0 3px 0 #474646,
+			            0 4px 0 #3B3B3B,
+			            0 5px 0 #242424,
+			            0 6px 1px rgba(0,0,0,.1),
+			            0 0 5px rgba(0,0,0,.1),
+			            0 1px 3px rgba(0,0,0,.3),
+			            0 3px 5px rgba(0,0,0,.2),
+			            0 5px 10px rgba(0,0,0,.25),
+			            0 10px 10px rgba(0,0,0,.2),
+			            0 20px 20px rgba(0,0,0,.15);
+		}
+		.mainSection:after{
+			content:'.';
+			line-height: 200px;
+			visibility: hidden;
+		}
+#container{
+	z-index: -1;
+
 	background: -webkit-linear-gradient(top,  #202128 0%, #121216 100%);
 	background: linear-gradient(to bottom,  #202128 0%, #121216 100%);
 	background: -moz-linear-gradient(top,  #202128 0%, #121216 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202128', endColorstr='#121216',GradientType=0 );
-}
 
-	#wrapTests a{
+}
+	#container a{
 		color: #322929;
 		text-decoration: none;
 	}
-	#wrapTests a div{
+	#container a div{
 		height: 115px;
-		margin-bottom: 10px;
+		/* margin-top: 50px; */
+		margin-bottom: 30px;
 		width: 100%;
 		text-align: center;
 		transition: 0.4s ease-out;
@@ -94,41 +173,39 @@ body{
 		background: linear-gradient(to bottom,  #e04747 0%,#b33838 6%,#b33838 93%,#6d3630 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e04747', endColorstr='#6d3630',GradientType=0 );
 	}
-	#wrapTests a>div{
+	#container a>div{
 		color: #262B31;
-
-	}		#wrapTests a>div:hover{ /*g*/
+	}
+		#container a>div:hover{
 			color: #353b42;
 			box-shadow:  inset 0px 0px 50px #702323, 0px 10px 10px #141313;
 		}
-
-
-	#wrapTests a div h1{
+	#container a div h1{
+		font-family: 'Luckiest Guy', cursive;
+		font-size: 40px;
 	    text-shadow: 0px 1px 0px #DC4545;
 		height: 100%;
 		padding: 0;
 		margin: 0;
+
 	}
-	#wrapTests a div h1:before{
+	#container a div h1:before{
 		height: 100%;
 		content:'';
 		display: inline-block;
 		vertical-align: middle;
 	}
 
-	#mainSections{
-    	width: 100%;
-	}
-		#mainSections:before{
-			content:'.';
-			line-height: 500px;
-			opacity: 0;
-		}
-		#mainSections:after{
-			content:'.';
-			line-height: 200px;
-			opacity: 0;
-		}
+#bodient{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	/* http://colorzilla.com/gradient-editor/#353b42+0,23262b+100&0+0,1+100 */
+	background: -webkit-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #090909 100%);
+	background: linear-gradient(to bottom,  rgba(32, 33, 40, 0) 50%, #090909 100%);
+	background: -moz-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #090909 100%);
+}
 
 /*#footer {
 	max-width: 980px;

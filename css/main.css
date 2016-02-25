@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
 @font-face {
     font-family: Squares;
-    src: url(../fonts/squares.otf);
+    src: url("../fonts/squares.otf") format("opentype");
 }
 html, body {height: 100%;}
 
@@ -25,8 +25,8 @@ header, #container{
 	max-width: 980px;
 	margin: 0 auto;
 	/*box-shadow: 0px 12px 43px rgba(173, 53, 53, 0.81);*/
-	 border-right: 1px solid #22252C;
-	 border-left: 1px solid #22252C;
+	border-right: 1px solid #22252C;
+	border-left: 1px solid #22252C;
 	background: -webkit-linear-gradient(top,  #272B33 0%, #17171C 100%);
     background: linear-gradient(to bottom, #272B33 0%, #17171C 100%);
 	background: -moz-linear-gradient(top,  #272B33 0%, #17171C 100%);
@@ -104,7 +104,7 @@ header, #container{
 	    height: 319px;
 	    width: 100%;
 	    bottom: 16%;
-	    margin-bottom: 117px;
+	    margin-bottom: 10%;
 	    z-index: 1;
 	}
 		#workflow hr{
@@ -112,10 +112,12 @@ header, #container{
             position: relative;
             bottom: 0px;
             border: 0;
-            height: 1px;
-            background: -moz-linear-gradient(left,  rgb(23, 23, 28) 0%, rgba(100,100,100,1) 50%, rgb(23, 23, 28) 100%);
-            background: -webkit-linear-gradient(left,  rgb(23, 23, 28) 0%,rgba(100,100,100,1) 50%,rgb(23, 23, 28) 100%);
-            background: linear-gradient(to right, rgb(23, 23, 28) 0%,rgba(100,100,100,1) 50%,rgb(23, 23, 28) 100%)
+            height: 2px;
+            background-color: #22252C;
+            background: -moz-linear-gradient(left,  #17171C 0%, #646464 50%, #17171C 100%);
+            background: -webkit-linear-gradient(left, #17171C 0%, #646464 50%, #17171C 100%);
+            background: linear-gradient(to right, #17171C 0%, #646464 50%, #17171C 100%);
+
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00646464', endColorstr='#00646464',GradientType=1 );
      }
 		#workflow>p{
@@ -124,7 +126,7 @@ header, #container{
 	        background: url(../img) 0px 0px no-repeat, #17171C;
     		color: #272B33;;
     		font-size: 113px;
-    		font-family: Squares;
+    		font-family: Squares, verdana;
     		text-align: center;
 			text-shadow:
 						0 1px 0 #6A6A6A,

@@ -13,33 +13,30 @@ body,p,hr,h1,h2,h3,h4,h5{
 }
 
 body{
-    background: #272B33;
-	/*background-image: url(../img/background.png);*/
+    background: #17171C;
+    /*background-image: url(../img/background.png);*/
 }
 
 
-header{	height: 100%;}
+header{height: 100%;}
 header, #container{
 	background: #202127;
 	position: relative;
-
 	max-width: 980px;
 	margin: 0 auto;
 	/*box-shadow: 0px 12px 43px rgba(173, 53, 53, 0.81);*/
-
-	border-right: 1px solid #22252C;
-	border-left: 1px solid #22252C;
-
-	background: -webkit-linear-gradient(top,  #202128 0%, #17171C 100%);
-	background: linear-gradient(to bottom,  #202128 0%, #17171C 100%);
-	background: -moz-linear-gradient(top,  #202128 0%, #17171C 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202128', endColorstr='#121216',GradientType=0 );
+	 border-right: 1px solid #22252C;
+	 border-left: 1px solid #22252C;
+	background: -webkit-linear-gradient(top,  #272B33 0%, #17171C 100%);
+    background: linear-gradient(to bottom, #272B33 0%, #17171C 100%);
+	background: -moz-linear-gradient(top,  #272B33 0%, #17171C 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17171C', endColorstr='#17171C',GradientType=0 );
 }
 
 
 	#mainImg{
 		height: 75%;
-	    max-height: 483px;
+		max-height: 483px;
 		width: 100%;
 		position: absolute;
 		top: 7%;
@@ -97,27 +94,30 @@ header, #container{
     position: absolute;
     z-index: 0;
     width: 100%;
-    bottom: 80px;
+    bottom: 10%;
 }
+
 	#city{
 	    background: url(../img/city.png) 0 bottom no-repeat;
-        background-size: contain;
-		position: absolute;
-		height: 319px;
-		width: 100%;
-		bottom: 16%;
-		margin-bottom: 120px;
-		z-index: 1;
+	    background-size: contain;
+	    position: absolute;
+	    height: 319px;
+	    width: 100%;
+	    bottom: 16%;
+	    margin-bottom: 117px;
+	    z-index: 1;
 	}
 		#workflow hr{
+            z-index: 5;
+            position: relative;
+            bottom: 0px;
             border: 0;
             height: 1px;
-
             background: -moz-linear-gradient(left,  rgb(23, 23, 28) 0%, rgba(100,100,100,1) 50%, rgb(23, 23, 28) 100%);
             background: -webkit-linear-gradient(left,  rgb(23, 23, 28) 0%,rgba(100,100,100,1) 50%,rgb(23, 23, 28) 100%);
-	        background: linear-gradient(to right, rgb(23, 23, 28) 0%,rgba(100,100,100,1) 50%,rgb(23, 23, 28) 100%)
+            background: linear-gradient(to right, rgb(23, 23, 28) 0%,rgba(100,100,100,1) 50%,rgb(23, 23, 28) 100%)
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00646464', endColorstr='#00646464',GradientType=1 );
-    	}
+     }
 		#workflow>p{
 			overflow: hidden;
 		    padding-bottom: 10px;
@@ -196,16 +196,16 @@ header, #container{
 		vertical-align: middle;
 	}
 
-#bodient{
+/*#bodient{
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
 	/* http://colorzilla.com/gradient-editor/#353b42+0,23262b+100&0+0,1+100 */
-	background: -webkit-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #090909 100%);
-	background: linear-gradient(to bottom,  rgba(32, 33, 40, 0) 50%, #090909 100%);
-	background: -moz-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #090909 100%);
-}
+	background: -webkit-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #202020 100%);
+	background: linear-gradient(to bottom,  rgba(32, 33, 40, 0) 50%, #202020 100%);
+	background: -moz-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #202020 100%);
+}*/
 
 /*#footer {
 	max-width: 980px;

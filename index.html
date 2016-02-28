@@ -8,38 +8,52 @@
 	<title>Workflow</title>
 </head>
 <body>
-	<div id="bodient"></div>
-	<header>
-		<section id="mainImg">
 
-			<div id="flower"><div id="blim"></div></div>
-		</section>
+<!-- <div id="bodient"></div> -->
+<header>
+	<section id="mainImg">
+		<div id="flower"><div id="blim"></div></div>
+	</section>
+	<div id="workflow"><div id="city"></div><hr><p class="flextext">WORKFLOW</p><hr></div>
+</header>
 
-		<div id="workflow"><div id="city"></div><hr><p id="flex">WORKFLOW</p><hr></div>
-	</header>
-	<div id="container">
+<div id="container">
+
+	<section id="mainSection">
+
+		<ul>
+		   <!-- <li><a href='#'><span>Home</span></a></li> -->
+		   <li class='active has-sub'><a href='#'><h1>Test Tasks</h1></a>
+		      <ul>
+		         <li class='has-sub'><a href='#'><h2>TEST-G</h2></a>
+		            <ul>
+		               <li><a target="blank" href='http://zheney.github.io/workflow/test-g/index.html'><span>open</span></a></li>
+		               <li class='last'>
+		               	<div></div>
+		               </li>
+		            </ul>
+		         </li>
+		         <li class='has-sub'><a href='#'><h2>TEST-U</h2></a>
+		            <ul>
+		               <li><a target="blank" href='http://zheney.github.io/workflow/test-u/index.html'><span>open</span></a></li>
+		               <li class='last'>
+		               	<div></div>
+		               </li>
+		            </ul>
+		         </li>
+		      </ul>
+		   </li>
+		<!--    <li><a href='#'><span>About</span></a></li>
+		   <li class='last'><a href='#'><span>Contact</span></a></li> -->
+		</ul>
 
 
-		<section class="mainSection">
-			<a target="blank" href="test-g/index.html">
-				<div><h1>TEST-G</h1></div>
-			</a>
-			<a target="blank" href="test-u/index.html">
-				<div><h1>TEST-U</h1></div>
-			</a>
-			<a target="blank" href="#">
-				<div><h1>TEST-P</h1></div>
-			</a>
-		</section>
-	</div>
-
-	<div id="footer"></div>
-
+	</section>
+</div>
+<!-- <div id="footer"></div> -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="js/jquery.fittext.js"></script>
-<script>
-  jQuery("#flex").fitText();
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>

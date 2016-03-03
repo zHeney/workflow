@@ -199,6 +199,10 @@ header, #container{
 		box-shadow:  inset 0px 0px 50px #702323, 0px 5px 10px #141313;
 		cursor: pointer;
 	}
+#mainSection > ul > li > ul{
+	display: block;
+}
+
 
 #mainSection > ul > li > a {
 	z-index: 3;

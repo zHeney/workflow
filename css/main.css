@@ -168,6 +168,12 @@ header, #container{
 		line-height: 200px;
 		visibility: hidden;
 	}
+#mainSection div:first-child{
+  margin: 0 auto;
+  text-align: center;
+  max-width: 600px;
+  height: 100%;
+}
 
 #mainSection h1{
 	font-family: 'Luckiest Guy', cursive;
@@ -207,20 +213,20 @@ header, #container{
 #mainSection > ul > li > a {
 	z-index: 3;
 	border-top-right-radius: 120px;
-    border-right: 35px solid;
-    border-top-left-radius: 120px;
-    border-left: 35px solid;
+  border-right: 35px solid;
+  border-top-left-radius: 120px;
+  border-left: 35px solid;
 	height: 115px;
-    width: 100%;
-    text-align: center;
-    transition: 0.4s ease-out;
-    box-shadow: inset 0px 0px 106px #702323, 0px 5px 10px #141313;
-    /* http: //colorzilla.com/gradient-editor/#e04747+0,b33838+6,b33838+93,6d3630+100; */
-    background: #e04747;
-    background: -moz-linear-gradient(top, #e04747 0%, #b33838 6%, #b33838 93%, #6d3630 100%);
-    background: -webkit-linear-gradient(top, #e04747 0%,#b33838 6%,#b33838 93%,#6d3630 100%);
-    background: linear-gradient(to bottom, #e04747 0%,#b33838 6%,#b33838 93%,#6d3630 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e04747', endColorstr='#6d3630',GradientType=0 );
+  width: 100%;
+  text-align: center;
+  transition: 0.4s ease-out;
+  box-shadow: inset 0px 0px 106px #702323, 0px 5px 10px #141313;
+  /* http: //colorzilla.com/gradient-editor/#e04747+0,b33838+6,b33838+93,6d3630+100; */
+  background: #e04747;
+  background: -moz-linear-gradient(top, #e04747 0%, #b33838 6%, #b33838 93%, #6d3630 100%);
+  background: -webkit-linear-gradient(top, #e04747 0%,#b33838 6%,#b33838 93%,#6d3630 100%);
+  background: linear-gradient(to bottom, #e04747 0%,#b33838 6%,#b33838 93%,#6d3630 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e04747', endColorstr='#6d3630',GradientType=0 );
 }
 
 #mainSection ul ul li a {
@@ -311,26 +317,32 @@ header, #container{
   border-top-color: inherit;
   border-left-color: inherit;
 }
-
-	/*http://colorzilla.com/gradient-editor/#353b42+0,23262b+100&0+0,1+100*/
+  /*http://colorzilla.com/gradient-editor/#353b42+0,23262b+100&0+0,1+100*/
 /*#bodient{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	background: -webkit-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #1A1A1A 100%);
-	background: linear-gradient(to bottom,  rgba(32, 33, 40, 0) 50%, #1A1A1A 100%);
-	background: -moz-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #1A1A1A 100%);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: -webkit-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #1A1A1A 100%);
+  background: linear-gradient(to bottom,  rgba(32, 33, 40, 0) 50%, #1A1A1A 100%);
+  background: -moz-linear-gradient(top,  rgba(32, 33, 40, 0) 50%, #1A1A1A 100%);
 }*/
 
 
 /*#footer {
-	max-width: 980px;
-	margin: 0 auto;
-	height: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  height: 200px;
 
-	background: #201616;
-	background: -moz-linear-gradient(top,  #201616 0%, #0B0B12 6%, #0E0D0D 93%, #000000 100%);
-	background: -webkit-linear-gradient(top,  #201616 0%,#0B0B12 6%,#0E0D0D 93%,#000000 100%);
+  background: #201616;
+  background: -moz-linear-gradient(top,  #201616 0%, #0B0B12 6%, #0E0D0D 93%, #000000 100%);
+  background: -webkit-linear-gradient(top,  #201616 0%,#0B0B12 6%,#0E0D0D 93%,#000000 100%);
     background: linear-gradient(to bottom, #201616 0%,#0B0B12 6%,#0E0D0D 93%,#000000 100%);
 }*/
+
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+.small-text{
+  font-size: 8px;
+      margin-left: 10px;
+}

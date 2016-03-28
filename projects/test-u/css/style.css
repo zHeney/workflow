@@ -5,7 +5,7 @@ body,hr,a,h1,h2,h3,h4,h5,h6,p{
 	padding: 0;
 }
 body{
-	background: url(img/backgroundBody.jpg);
+	background: url(../img/backgroundBody.jpg);
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 }
@@ -70,7 +70,7 @@ hr{
     	min-width: 205px;
     	width: 25%;
     	height: 70px;
-    	background-image: url(img/logo.png);
+    	background-image: url(../img/logo.png);
     	background-repeat: no-repeat;
 	}
 	#wrapTop{ /*Правая обертка хэдера*/
@@ -132,7 +132,7 @@ hr{
 	}
 
 		#search{
-   			background-image: url(img/search.png);
+   			background-image: url(../img/search.png);
    			background-position: 95% 12px;
    			background-repeat: no-repeat;
    			padding-left: 20px;
@@ -195,7 +195,7 @@ hr{
 		        	        transition: background-color 250ms ;*/
 				}
 				#leftBlock ul li:hover{
-					background-image: url(img/texture.png);
+					background-image: url(../img/texture.png);
 					box-shadow: inset #EA7E55 3px 0px 0px 0px;
 					background-color: #424242;
 				}
@@ -380,7 +380,7 @@ hr{
 							display: inline-block;
 							width: 15px;
 							height: 15px;
-							background: url(img/icoPack.png) no-repeat;
+							background: url(../img/icoPack.png) no-repeat;
 						}
 						.infoSilmilarFilm div{
 							vertical-align: top;
@@ -593,7 +593,7 @@ hr{
 
 /*----------------------------------------------------*/
 
-	.texture{background-image: url(img/texture.png);}
+	.texture{background-image: url(../img/texture.png);}
 	.inline{display: inline-block;}
 	.orange{color: #FF8000;}
 	.orangeLink a{color: #FF8000;}

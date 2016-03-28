@@ -31,9 +31,9 @@ header{
 	  padding-bottom: 20px;
 	}
 	.logo{
-    display: inline-block;
-    margin-top: 70px;
-    margin-left: 10%;
+    	display: inline-block;
+    	margin-top: 70px;
+    	margin-left: 10%;
 	}
 	.logo *, #tel{
 		display: inline-block;
@@ -50,10 +50,10 @@ header{
 			vertical-align: top;
 		}
 		.logo>div>h1{
-	   	font-size: 30px;
-    	vertical-align: top;
-    	line-height: 0.8;
-    	margin-top: 9px;
+	   		font-size: 30px;
+    		vertical-align: top;
+    		line-height: 0.8;
+    		margin-top: 9px;
 		}
 		.logo>div>h1+p{
 			vertical-align: bottom;
@@ -65,11 +65,11 @@ header{
 				height: 15px;
 			}
 	#tel{
-    float: right;
-    height: 100px;
-    font-size: 40px;
-    margin-top: 70px;
-    margin-right: 5%;
+    	float: right;
+    	height: 100px;
+    	font-size: 40px;
+    	margin-top: 70px;
+    	margin-right: 5%;
   }
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|MENU|-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
@@ -99,9 +99,9 @@ header{
 		position: absolute;
 		display: inline-block;
 		opacity: 0.2;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+    	-webkit-border-radius: 50%;
+    	-moz-border-radius: 50%;
+    	border-radius: 50%;
 	}
 	#circles>span:nth-child(1){/*blue*/
 		height: 300px;
@@ -111,11 +111,11 @@ header{
 		background-color: #2A4DE4;
 	}
 	#circles>span:nth-child(2){/*green*/
-    height: 190px;
-    width: 190px;
-    left: 21%;
-    top: 51px;
-    background-color: #5D9C03;
+    	height: 190px;
+    	width: 190px;
+    	left: 21%;
+    	top: 51px;
+    	background-color: #5D9C03;
 	}
 	#circles>span:nth-child(3){/*red*/
 		height: 300px;
@@ -125,28 +125,28 @@ header{
 		background-color: #E45F2A;
 	}
 	#circles>span:nth-child(4){/*blue*/
-    height: 230px;
-    width: 230px;
-    left: 30%;
-    margin-left: 380px;
-    top: 70px;
-    background-color: #2A4DE4;
+    	height: 230px;
+    	width: 230px;
+    	left: 30%;
+    	margin-left: 380px;
+    	top: 70px;
+    	background-color: #2A4DE4;
 	}
 	#circles>span:nth-child(5){/*red*/
-    height: 300px;
-    width: 300px;
-    left: 51%;
-    margin-left: 280px;
-    top: -50px;
-    background-color: #E45F2A;
+   		height: 300px;
+   		width: 300px;
+   		left: 51%;
+   		margin-left: 280px;
+   		top: -50px;
+   		background-color: #E45F2A;
 	}
 	#circles>span:nth-child(6){/*green*/
-    height: 190px;
-    width: 190px;
-    left: 32%;
-    margin-left: 700px;
-    top: 200px;
-    background-color: #5D9C03;
+   		height: 190px;
+   		width: 190px;
+   		left: 32%;
+   		margin-left: 700px;
+   		top: 200px;
+   		background-color: #5D9C03;
 	}
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|CONTENT|-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
@@ -156,7 +156,7 @@ header{
 	text-align: center;
 }
 	#content div, #content aside, #content section, footer div, footer section {
-    position: relative;
+    	position: relative;
 		display: inline-block;
 		box-sizing: border-box;
 	}
@@ -169,7 +169,7 @@ header{
 		max-width: 1000px;
 		margin: 0 auto;
 		padding-top: 40px;
-    padding-left: 10px;
+    	padding-left: 10px;
 		padding-bottom: 40px;
 		text-align: left;
 	}
@@ -205,6 +205,9 @@ header{
   			font-size: 13px;
   			line-height: 1.8;
   		}
+  		aside>div>div>p:first-child{
+		    font-style: italic;
+  		}
   		aside>div>a:last-child{
   			float: right;
 		    position: absolute;
@@ -231,7 +234,7 @@ header{
 
 @media all and (max-width: 700px) {
 	aside, #content>div>section{
-		width: calc(100% - 10px););
+		width: calc(100% - 10px);
 		max-width: 660px;
 	}
 	#content{
@@ -263,7 +266,7 @@ footer{
 	}
 	footer>section>div{
 		width: 33.33%;
-    min-width: 170px;
+    	min-width: 170px;
 		padding-top: 50px;
 		float: left;
 	}

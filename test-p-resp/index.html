@@ -2,9 +2,251 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="main.css">
+
 	<title>TEST-P responsive</title>
 </head>
 <body>
 
+<div class="container-fluid">
+
+	<!-- HEADER -->
+	<header>
+		<div class="row">
+			<div class="logo col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+				<span></span>
+				<div>
+					<h2>Название <br> компании</h2>
+					<p>самая клевая компания</p>
+				</div>
+			</div>
+			<div id="tel" class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+					<p>+7(499) 777-77-77</p>
+					<p>+7(499) 777-77-77</p>
+					<a href="#"><h3>Обратная связь</h3></a>
+			</div>
+		</div>
+	</header>
+
+	<!-- MENU -->
+
+	<nav id="menu">
+		<a href="#">Главная</a>
+		<span>|</span>
+		<a href="#">Каталог</a>
+		<span>|</span>
+		<a href="#">Доставка и оплата</a>
+		<span>|</span>
+		<a href="#">Прайс-лист</a>
+		<span>|</span>
+		<a href="#">Контакты</a>
+	</nav>
+
+	<!-- SLIDER -->
+
+	<section id="circles">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	 		<!-- Wrapper for slides -->
+	 		<div class="carousel-inner" role="listbox">
+	 		  <div class="item active">
+	 				<h1>1</h1>
+	 		  </div>
+	 		  <div class="item">
+	 				<h1>2</h1>
+	 		  </div>
+	 		  <div class="item">
+	 				<h1>3</h1>
+	 		  </div>
+	 		  <div class="item">
+	 				<h1>4</h1>
+	 		  </div>
+	 		</div>
+	 		<!-- Left and right controls -->
+	 		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	 		  	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	 		  	<span class="sr-only">Previous</span>
+	 		</a>
+	 		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	 		  	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	 		  	<span class="sr-only">Next</span>
+	 		</a>
+		</div>
+	</section>
+
+	<!-- breadcrumbs -->
+	<div class="breadcrumbs col-sm-11 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		<a href="#">Главная </a> &nbsp;/&nbsp;
+		<a href="#">Каталог </a> &nbsp;/&nbsp;
+		<span>Бытовая техника</span>
+	</div>
+
+	<!-- CONTENT -->
+
+	<div id="content" class="row">
+
+		<!-- vertical nav -->
+		<div id="vert-menu" class="col-sm-2 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+			<nav>
+    		   <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu">
+    		   	<!-- Автомобили -->
+    		    	<li>
+    		      	<a href="#1" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu">Автомобили</a>
+    		      	<ul class="nav-pills nav-stacked collapse" id="item1">
+    		      		<li><a href="#1">Link 1</a></li>
+    		      		<li><a href="#1">Link 2</a></li>
+    		      	</ul>
+    		    	</li>
+    		    	<!-- Бытовая техника -->
+    		    	<li>
+    		      	<a href="#1" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu">Бытовая техника</a>
+    		      	<ul class="nav-pills nav-stacked collapse" id="item2">
+ 							<li><a href="#1">Link 1</a></li>
+ 							<li><a href="#1">Link 2</a></li>
+ 							<li><a href="#1">Link 3</a></li>
+    		      	</ul>
+    		    	</li>
+    		    	<!-- Мобильная техника -->
+    		    	<li>
+    		      	<a href="#1" data-target="#item3" data-toggle="collapse" data-parent="#stacked-menu">Мобильная техника</a>
+    		      	<ul class="nav-pills nav-stacked collapse" id="item3">
+ 							<li><a href="#1">Link 1</a></li>
+ 							<li><a href="#1">Link 2</a></li>
+ 							<li><a href="#1">Link 3</a></li>
+    		      	</ul>
+    		    	</li>
+    		    	<!-- Одежда -->
+    		    	<li>
+    		      	<a href="#1" data-target="#item4" data-toggle="collapse" data-parent="#stacked-menu">Одежда</a>
+    		      	<ul class="nav-pills nav-stacked collapse" id="item4">
+ 							<li><a href="#1">Link 1</a></li>
+ 							<li><a href="#1">Link 2</a></li>
+ 							<li><a href="#1">Link 3</a></li>
+    		      	</ul>
+    		    	</li>
+    		    	<!-- Компьютеры -->
+    		    	<li>
+    		      	<a href="#1" data-target="#item5" data-toggle="collapse" data-parent="#stacked-menu">Компьютеры</a>
+    		      	<ul class="nav-pills nav-stacked collapse" id="item5">
+ 							<li><a href="#1">Link 1</a></li>
+ 							<li><a href="#1">Link 2</a></li>
+ 							<li><a href="#1">Link 3</a></li>
+    		      	</ul>
+    		    	</li>
+    		    	<!-- Недвижимость -->
+    		    	<li>
+    		      	<a href="#1" data-target="#item6" data-toggle="collapse" data-parent="#stacked-menu">Недвижимость</a>
+    		      	<ul class="nav-pills nav-stacked collapse" id="item6">
+ 							<li><a href="#1">Link 1</a></li>
+ 							<li><a href="#1">Link 2</a></li>
+ 							<li><a href="#1">Link 3</a></li>
+    		      	</ul>
+    		    	</li>
+
+    		   </ul>
+				<div>
+					<img src="img/exel.png" height="111" width="97" alt="">
+					<h2 id="price" >Прайс лист</h2>
+				</div>
+			</nav>
+		</div>
+
+		<!-- main content -->
+		<div class="m-content col-sm-8 col-sm-offset-0 col-xs-11 col-xs-offset-1">
+			<div class="m-item" >
+				<img src="img/nophoto.png" alt="">
+				<p>Здесь должен быть товар, который необходимо купить</p>
+				<h2>1 900грн.</h2>
+				<a href="#"><img src="img/addtobasket.png" height="21" width="28" alt=""></a>
+			</div>
+			<div class="m-item" >
+				<img src="img/nophoto.png" alt="">
+				<p>Здесь должен быть товар, который необходимо купить</p>
+				<h2>1 900грн.</h2>
+				<a href="#"><img src="img/addtobasket.png" height="21" width="28" alt=""></a>
+			</div>
+			<div class="m-item" >
+				<img src="img/nophoto.png" alt="">
+				<p>Здесь должен быть товар, который необходимо купить</p>
+				<h2>1 900грн.</h2>
+				<a href="#"><img src="img/addtobasket.png" height="21" width="28" alt=""></a>
+			</div>
+			<div class="m-item" >
+				<img src="img/nophoto.png" alt="">
+				<p>Здесь должен быть товар, который необходимо купить</p>
+				<h2>1 900грн.</h2>
+				<a href="#"><img src="img/addtobasket.png" height="21" width="28" alt=""></a>
+			</div>
+			<div class="m-item" >
+				<img src="img/nophoto.png" alt="">
+				<p>Здесь должен быть товар, который необходимо купить</p>
+				<h2>1 900грн.</h2>
+				<a href="#"><img src="img/addtobasket.png" height="21" width="28" alt=""></a>
+			</div>
+
+			<div class="clearfix"></div>
+			<!-- content-nav -->
+			<div class="row">
+				<div class="m-content-nav col-sm-12 col-sm-offset-0 col-xs-11 col-xs-offset-0">
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a class="m-nav-active" href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<hr>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div class="row info">
+				<div class="m-content col-sm-6 col-sm-offset-0 col-xs-11 col-xs-offset-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolorum consequatur magnam maiores, porro numquam, harum ducimus rerum et tempore sapiente quas, enim iste! Ducimus laborum consequuntur nobis, ad debitis saepe beatae nisi perspiciatis a laudantium dignissimos tempora esse accusantium magni ab autem iusto placeat, numquam cupiditate molestiae. Voluptatem corporis rerum non qui, sapiente ipsum eaque voluptatum asperiores, commodi, odit, architecto ratione laudantium! Quibusdam velit inventore, incidunt minus, earum nobis suscipit beatae! Laudantium harum blanditiis in tempora voluptatibus sint laborum corrupti possimus esse amet, totam eius perferendis placeat rerum modi at. A ut reprehenderit sapiente aperiam nobis odit quas repellendus.</div>
+				<div class="m-content col-sm-6 col-sm-offset-0 col-xs-11 col-xs-offset-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni animi architecto corporis, commodi cupiditate quae exercitationem. Eligendi et voluptates iste enim laborum aspernatur quasi, ut, impedit consequuntur, ratione perferendis assumenda deserunt excepturi officiis fugiat veniam repellendus ab distinctio voluptate voluptas. Laborum dignissimos, optio unde, qui voluptatum nostrum aperiam quam maiores omnis suscipit, tempora saepe! Eius ea odit suscipit quis ipsam eaque, excepturi quam dignissimos. Nobis minima, voluptates possimus, officia architecto praesentium, laboriosam porro, odit quasi commodi aliquam! Velit id veritatis officiis error nulla ad distinctio, alias, perspiciatis, amet quam omnis sit dicta culpa. Quaerat officiis vel facere officia illum quod.</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+	<footer>
+		<div class="container-fluid">
+			<div class="row foot-cont" >
+				<div class="col-sm-3 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					<p>© 2012–2013 ЗАО «Компания»</p>
+					<p>info@name.ru</p>
+				</div>
+				<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+					<a href="#">Главная</a>
+					<a href="#">Каталог</a>
+					<a href="#">Доставка и оплата</a>
+					<a href="#">Прайс-лист</a>
+					<a href="#">Контакты</a>
+				</div>
+				<div class="logo col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+					<span></span>
+					<div>
+						<h2>Название <br> компании</h2>
+						<p>самая клевая компания</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/fittext.js" type="text/javascript"></script>
+<script>jQuery("#price").fitText(1.2, { minFontSize: '19px', maxFontSize: '25px' });</script>
+<script>jQuery("#menu").fitText(1.2, { minFontSize: '19px', maxFontSize: '30px' });</script>
 </body>
 </html>

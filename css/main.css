@@ -20,12 +20,13 @@ header, #container{
 	background: #202127;
 	position: relative;
 	max-width: 980px;
+  min-width: 360px;
 	margin: 0 auto;
 	/*box-shadow: 0px 12px 43px rgba(173, 53, 53, 0.81);*/
 	border-right: 1px solid #22252C;
 	border-left: 1px solid #22252C;
 	background: -webkit-linear-gradient(top,  #272B33 0%, #17171C 100%);
-    background: linear-gradient(to bottom, #272B33 0%, #17171C 100%);
+  background: linear-gradient(to bottom, #272B33 0%, #17171C 100%);
 	background: -moz-linear-gradient(top,  #272B33 0%, #17171C 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17171C', endColorstr='#17171C',GradientType=0 );
 }
@@ -40,18 +41,18 @@ header, #container{
 }
 @media screen and (min-height: 850px){
 	#mainImg{
-		z-index: 2;
+	z-index: 2;
 	}
 }
 #flower{
 	position: absolute;
 	height: 100%;
 	width: 100%;
-    background: url(../img/shutterflower.png) center center no-repeat;
-     background-size: contain;
+  background: url(../img/shutterflower.png) center center no-repeat;
+  background-size: contain;
 }
 #blim{
-     position: absolute;
+  position: absolute;
  	height: 50px;
  	width: 50px;
  	background: #44D3FF;
@@ -71,69 +72,69 @@ header, #container{
 
 @-webkit-keyframes blim {
     0%   {background-color:#17171C;}
-    40%   {background-color:#17171C;}
-    60%   {background-color:#44D3FF; /*blue*/ }
+    40%  {background-color:#17171C;}
+    60%  {background-color:#44D3FF; /*blue*/ }
     85%  {background-color:#44D3FF; /*blue*/ }
     100% {background-color:#17171C;}
 }
 
 @keyframes blim {
     0%   {background-color:#17171C;}
-    40%   {background-color:#17171C;}
-    60%   {background-color:#44D3FF; /*blue*/ }
+    40%  {background-color:#17171C;}
+    60%  {background-color:#44D3FF; /*blue*/ }
     85%  {background-color:#44D3FF; /*blue*/ }
     100% {background-color:#17171C;}
 }
 #workflow {
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    bottom: 10%;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  bottom: 10%;
 }
 	#city{
-	    background: url(../img/city.png) 0 bottom no-repeat;
-	    background-size: contain;
-	    position: absolute;
-	    height: 319px;
-	    width: 100%;
-	    bottom: 16%;
-	    margin-bottom: 10.8%;
-	    z-index: 1;
+	  background: url(../img/city.png) 0 bottom no-repeat;
+	  background-size: contain;
+	  position: absolute;
+	  height: 319px;
+	  width: 100%;
+	  bottom: 16%;
+	  margin-bottom: 10.8%;
+	  z-index: 1;
 	}
 		#workflow hr{
-            z-index: 5;
-            position: relative;
-            bottom: 0px;
-            border: 0;
-            height: 2px;
-            background-color: #22252C;
-            background: -moz-linear-gradient(left,  #17171C 0%, #646464 50%, #17171C 100%);
-            background: -webkit-linear-gradient(left, #17171C 0%, #646464 50%, #17171C 100%);
-            background: linear-gradient(to right, #17171C 0%, #646464 50%, #17171C 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00646464', endColorstr='#00646464',GradientType=1 );
+      z-index: 5;
+      position: relative;
+      bottom: 0px;
+      border: 0;
+      height: 2px;
+      background-color: #22252C;
+      background: -moz-linear-gradient(left,  #17171C 0%, #646464 50%, #17171C 100%);
+      background: -webkit-linear-gradient(left, #17171C 0%, #646464 50%, #17171C 100%);
+      background: linear-gradient(to right, #17171C 0%, #646464 50%, #17171C 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00646464', endColorstr='#00646464',GradientType=1 );
      	}
 		#workflow>p{
 			z-index: 5;
 			overflow: hidden;
-		    padding-bottom: 10px;
-	        background: url(../img) 0px 0px no-repeat, #17171C;
-    		color: #272B33;;
-    		font-size: 113px;
-    		font-family: Squares, verdana;
-    		text-align: center;
+		  padding-bottom: 10px;
+	    background: url(../img) 0px 0px no-repeat, #17171C;
+    	color: #272B33;;
+    	font-size: 113px;
+    	font-family: Squares, verdana;
+    	text-align: center;
 			text-shadow:
-						0 1px 0 #6A6A6A,
-			            0 2px 0 #4D4D4D,
-			            0 3px 0 #474646,
-			            0 4px 0 #3B3B3B,
-			            0 5px 0 #242424,
-			            0 6px 1px rgba(0,0,0,.1),
-			            0 0 5px rgba(0,0,0,.1),
-			            0 1px 3px rgba(0,0,0,.3),
-			            0 3px 5px rgba(0,0,0,.2),
-			            0 5px 10px rgba(0,0,0,.25),
-			            0 10px 10px rgba(0,0,0,.2),
-			            0 20px 20px rgba(0,0,0,.15);
+			0 1px 0 #6A6A6A,
+			0 2px 0 #4D4D4D,
+			0 3px 0 #474646,
+			0 4px 0 #3B3B3B,
+			0 5px 0 #242424,
+			0 6px 1px rgba(0,0,0,.1),
+			0 0 5px rgba(0,0,0,.1),
+			0 1px 3px rgba(0,0,0,.3),
+			0 3px 5px rgba(0,0,0,.2),
+			0 5px 10px rgba(0,0,0,.25),
+			0 10px 10px rgba(0,0,0,.2),
+			0 20px 20px rgba(0,0,0,.15);
 		}
 
 /*----------------CONTAINER----------------*/
@@ -168,7 +169,7 @@ header, #container{
 		line-height: 200px;
 		visibility: hidden;
 	}
-#mainSection div:first-child{
+#mainSection .section-name{
   margin: 0 auto;
   text-align: center;
   max-width: 600px;
@@ -191,14 +192,24 @@ header, #container{
 	}
 
 #mainSection>ul{
-    margin-bottom: 30px;
-    color: #262B31;
+  margin-bottom: 30px;
+  color: #262B31;
 }
 #mainSection ul ul {
 	display: none;
-	border-left: 34px solid;
-	border-right: 34px solid;
+
 	font-family: Squares, verdana;
+}
+#mainSection .test-name{
+  border-left: 34px solid;
+  border-right: 34px solid;
+}
+#mainSection .test-name>ul{
+  font-size: 14px;
+  color: #C3C3C3;
+  border-left: 10px solid #262B31;
+  border-right: 10px solid #262B31;
+  background-color: #424852;
 }
 	#mainSection>ul>li>a:hover{
 		color: #353b42;
@@ -208,7 +219,6 @@ header, #container{
 #mainSection > ul > li > ul{
 	display: block;
 }
-
 
 #mainSection > ul > li > a {
 	z-index: 3;
@@ -228,7 +238,6 @@ header, #container{
   background: linear-gradient(to bottom, #e04747 0%,#b33838 6%,#b33838 93%,#6d3630 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e04747', endColorstr='#6d3630',GradientType=0 );
 }
-
 #mainSection ul ul li a {
   cursor: pointer;
   border-bottom: 1px solid #32373e;
@@ -236,15 +245,17 @@ header, #container{
   z-index: 1;
   text-decoration: none;
   font-size: 13px;
-  color: #eeeeee;
+  color: #B94646;
   background: #1D2126;
 }
-
+#mainSection .test-name ul li a span{
+  color: mediumseagreen;
+}
 #mainSection ul ul li:hover > a,
 #mainSection ul ul li.open > a,
 #mainSection ul ul li.active > a {
-  background: #424852;
-  color: #ffffff;
+  background: #17171C;
+  color: #B94646;
 }
 #mainSection ul ul ul li a {
   padding-left: 30px;
@@ -260,6 +271,25 @@ header, #container{
 #mainSection > ul > li > ul > li.open:last-child > ul > li:last-child > a {
   border-bottom: 0;
 }
+.wrap-notice {
+  width: 260px;
+  float: left;
+  height: 100%;
+}
+.wrap-notice .preview{
+  min-height: 200px;
+  height: 100%;
+}
+.wrap-notice p{
+  width: 100%;
+  display: inline-block;
+  background-color: brown;
+  text-align: center;
+}
+.wrap-notice .notice{
+
+}
+
 #mainSection ul ul li.has-sub > a::after {
   display: block;
   position: absolute;
@@ -269,8 +299,8 @@ header, #container{
   right: 20px;
   z-index: 10;
   top: 17.5px;
-  border-top: 2px solid #eeeeee;
-  border-left: 2px solid #eeeeee;
+  border-top: 2px solid #B94646;
+  border-left: 2px solid #B94646;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
@@ -280,7 +310,7 @@ header, #container{
 #mainSection ul ul li.active > a::after,
 #mainSection ul ul li.open > a::after,
 #mainSection ul ul li > a:hover::after {
-  border-color: #ffffff;
+  border-color: #B94646;
 }
 
 .holder {
@@ -323,5 +353,12 @@ header, #container{
 
 .small-text{
   font-size: 8px;
-      margin-left: 10px;
+  margin-left: 10px;
+}
+.clearfix:after{
+  font-size: 0;
+  content: '.';
+  clear: both;
+  display: block;
+  visibility: hidden;
 }

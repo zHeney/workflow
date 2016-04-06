@@ -1,6 +1,18 @@
 ( function( $ ) {
 $( document ).ready(function() {
 
+// COLORBOX
+  $(".photo").colorbox({rel:'photo', fixed: "true", transition:"fade", height: "100%", maxWidth: "100%", opacity: "0.7", returnFocus: "false"});
+
+  $(".callbacks").colorbox({
+    onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+    onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+    onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+    onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+    onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+  });
+
+// FITTEXT
   $.fn.fitText = function( kompressor, options ) {
 
     // Setup options

@@ -182,7 +182,7 @@ header, #container{
 }
 
 #mainSection h1{
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Luckiest Guy', tahoma, cursive;
   font-size: 48px;
   text-shadow: 0px 1px 0px #DC4545;
   height: 100%;
@@ -308,10 +308,11 @@ header, #container{
   border-bottom: 0;
 }
 #mainSection .subj-name .wrap-notice {
-  width: 260px;
+  width: 100%;
   height: 100%;
-  text-align: center;
+  text-align: left;
 }
+
 #mainSection .subj-name .wrap-design{
   width: 100%;
 }
@@ -321,9 +322,8 @@ header, #container{
   padding: 0;
   border: 0;
 }
-#mainSection .subj-name .wrap-design .photo div{}
 
-#mainSection .subj-name .wrap-design .photo div img {width: 98.7%;}
+#mainSection .subj-name .wrap-design .photo div img {width: 98.904%;}
 
 @media all and (max-width: 550px){
   #mainSection > ul > li > a{
@@ -332,9 +332,13 @@ header, #container{
   #mainSection .subj-name{
     border: 0;
   }
-
   #mainSection .subj-name .wrap-notice{
     width: 100%;
+  }
+  #mainSection .subj-name .wrap-notice .wrap-preview {
+    float: left;
+    width: 100%;
+    text-align: center;
   }
   #mainSection .subj-name ul li a span{
     width: 100%;
@@ -348,8 +352,10 @@ header, #container{
     width: 50%;
   }
 }
-
-#mainSection .wrap-notice .preview{
+#mainSection .wrap-notice .wrap-preview{
+  float: left;
+}
+#mainSection .wrap-notice .wrap-preview .preview{
   min-height: 200px;
   height: 100%;
 }
@@ -359,8 +365,11 @@ header, #container{
   background-color: brown;
   text-align: center;
 }
- .wrap-notice .notice{
-
+#mainSection .subj-name .wrap-notice .notice {
+  padding: 13px 30px;
+  display: table-cell;
+  line-height: 1.5;
+  font-family: monospace;
 }
 
 #mainSection ul ul li.has-sub > a::after {

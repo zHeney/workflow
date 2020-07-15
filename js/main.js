@@ -4,45 +4,45 @@ $( document ).ready(function() {
 
 // ----------------------------------- TEXT EFFECT
 
-/*const text = document.querySelectorAll(".moving_effect1");
-const halfX = window.innerWidth / 2;
-const halfY = window.innerHeight / 2;
+// const text = document.querySelectorAll(".moving_effect1");
+// const halfX = window.innerWidth / 2;
+// const halfY = window.innerHeight / 2;
 
-text.forEach((el, i) => {
-  TweenMax.to(el, 1, {
-    z: 1 * (i + 8) });
+// text.forEach((el, i) => {
+//   TweenMax.to(el, 1, {
+//     z: 1 * (i + 8) });
 
-});
+// });
 
-document.addEventListener("mousemove", e => {
-  text.forEach((el, i) => {
-    TweenMax.to(el, 2.0, {
-      x: (e.clientX - halfX) * (i + 1) * 0.001,
-      y: (e.clientY - halfY) * (i + 1) * 0.001 });
+// document.addEventListener("mousemove", e => {
+//   text.forEach((el, i) => {
+//     TweenMax.to(el, 2.0, {
+//       x: (e.clientX - halfX) * (i + 1) * 0.001,
+//       y: (e.clientY - halfY) * (i + 1) * 0.001 });
 
-  });
-});
+//   });
+// });
 
-// ------- on categories
+// // ------- on categories
 
-const text2 = document.querySelectorAll(".category");
-const halfX2 = window.innerWidth / 2;
-const halfY2 = window.innerHeight / 2;
+// const text2 = document.querySelectorAll(".category");
+// const halfX2 = window.innerWidth / 2;
+// const halfY2 = window.innerHeight / 2;
 
-text2.forEach((el, i) => {
-  TweenMax.to(el, 1, {
-    z: 1 * (i + 8) });
+// text2.forEach((el, i) => {
+//   TweenMax.to(el, 1, {
+//     z: 1 * (i + 8) });
 
-});
+// });
 
-document.addEventListener("mousemove", e => {
-  text2.forEach((el, i) => {
-    TweenMax.to(el, 2.0, {
-      x: (e.clientX - halfX2) * (i + 1) * 0.02,
-      y: (e.clientY - halfY2) * (i + 1) * 0.02 });
+// document.addEventListener("mousemove", e => {
+//   text2.forEach((el, i) => {
+//     TweenMax.to(el, 2.0, {
+//       x: (e.clientX - halfX2) * (i + 1) * 0.02,
+//       y: (e.clientY - halfY2) * (i + 1) * 0.02 });
 
-  });
-});*/
+//   });
+// });
 
 // ----------------------------------- add class to thumbs
 

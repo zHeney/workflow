@@ -15,6 +15,10 @@ body,p,hr,h1,h2,h3,h4,h5{
   text-rendering: optimizeLegibility;
 }
 
+h1{
+  color: #2f2323;
+}
+
 body{
   background-color: rgb(47, 35, 35);
   font-family: 'Kanit', sans-serif;
@@ -41,6 +45,8 @@ a:link, a:visited, a:active {color: #262B31;}
 :focus {outline: 0;}
 
 a{text-decoration: none;}
+
+.disable-hover {pointer-events: none;}
 
 /* --------------------------- HOMEPAGE -----------------------------*/
 
@@ -74,7 +80,6 @@ a{text-decoration: none;}
 }
 .container h1{
   position: relative;
-  color: #2f2323;
   font-size: 7vw;
   margin-bottom: 16vw;
   margin-top: 20vw;
@@ -105,7 +110,7 @@ a{text-decoration: none;}
   min-width: 50px;
   min-height: 30px;
   border-radius: 100px;
-  /*transition: .3s ease-out;*/
+  transition: 1.3s ease-out;
   -webkit-transition: 2s cubic-bezier(0.14, 1.13, 0, 0.91);
   -moz-transition: 2s cubic-bezier(0.14, 1.13, 0, 0.91);
   transition: 2s cubic-bezier(0.14, 1.13, 0, 0.91);
@@ -121,13 +126,17 @@ a{text-decoration: none;}
 }
 
 .menu_home a:hover{
+  background-color: #ececec;
+  transition: 1.3s ease-out;
+}
+
+.menu_home a:hover{
   animation-name: pulse;
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
   -moz-animation-timing-function: ease-in-out;
-  background-color: #ececec;
 }
 
 @keyframes pulse {
@@ -247,6 +256,11 @@ a{text-decoration: none;}
 .projects .category{
   margin-bottom: 15vw;
 }
+.category{
+  transition: opacity 2s ease-out;
+  opacity: 0;
+}
+
 .undrline:before, .undrline-active:before{
   content: "";
   position: absolute;
@@ -280,7 +294,7 @@ a{text-decoration: none;}
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: inherit;
   opacity: 0;
 }
 
@@ -311,7 +325,7 @@ a{text-decoration: none;}
   border-top: solid #ffffff 7px;
   box-shadow: 50px 40px 106px rgba(47, 35, 35, 0.19), 10px 15px 20px rgba(47, 35, 35, 0.09), 3px 4px 5px rgba(47, 35, 35, 0.02);
 }
-    .hover{
+    .h:hover{
       overflow: visible;
       background-color: #f5f4f4;
       transform: rotateY( 0deg ) rotateX( 0deg ) skew(0deg, 0deg) rotate(0deg);
@@ -334,9 +348,6 @@ a{text-decoration: none;}
       opacity: 1;
       filter: blur(0px);
       top: -40px;
-      }
-      .h:after{
-        background: black;
       }
 
 .h a{
@@ -395,21 +406,19 @@ a{text-decoration: none;}
 }
 
 #mob{
-  opacity: 0;
   margin-top: 10vw;
 }
 
-#webDesign_cont, #appMob_cont{
-  transition: 1.5s cubic-bezier(.26,.45,.5,1.04);
+#webDesign_cont, #appMob_cont, #animations_cont{
   transform: translateY(100px);
 }
     .fadeup-category{
       opacity: 1 !important;
-      transition: opacity 2s ease-out;
     }
     .fadeup{
       transform: translateY(0px) !important;
       opacity: 1;
+      transition: 1.5s cubic-bezier(.26,.45,.5,1.04);
     }
 
 #webDesign_cont>div:nth-child(1){
@@ -475,6 +484,39 @@ a{text-decoration: none;}
   opacity: 1;
 }
 
+/* ------ ANIMATIONS (Lottie) -------*/
+
+lottie-player{
+  width: 400px;
+  height: 400px;
+}
+
+.animation{
+  background: transparent;
+}
+
+#animations_cont{
+/*  justify-content: center;
+  align-items: center;
+  position: relative;*/
+}
+
+#animations_cont .h{
+  transform: rotateY( 0deg ) rotateX( 0deg ) skew(0deg, 0deg) rotate(0deg);
+  border-right: solid #d2cfcf 0px;
+  border-top: solid #ffffff 0px;
+  border-radius: 50%;
+}
+#animations_cont .h:nth-child(2){
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 3px 5px rgba(20, 19, 19, 0.03), 0px 1px 1px rgba(20, 19, 19, 0.03);
+
+}
+  #animations_cont .h:hover{
+    overflow: hidden;
+    background-color: white;
+  }
+
+
 /* ---------- To Top --------- */
 
 .to_top_arrow{
@@ -512,7 +554,7 @@ a{text-decoration: none;}
   display: inline;
   color: #2f2323;
   padding: 0 15px;
-  margin-right: 25px;
+  /*margin-right: 25px;*/
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -520,7 +562,6 @@ a{text-decoration: none;}
 .header h1{
   font-family: 'Kanit', sans-serif;
   font-weight: 500;
-  color: #2f2323;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -571,6 +612,7 @@ footer{
 }
 footer>hr{
   border-top: 1px solid rgba(47, 35, 35, 0.2);
+  border-bottom: 0px;
   margin-top: 30px;
 }
 footer>div{
@@ -617,7 +659,6 @@ footer h1{
   line-height: 2;
   font-weight: 400;
   display: inline;
-  color: #2f2323;
   padding: 0 15px;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -628,6 +669,7 @@ footer h1{
 .main_image_columns{
   text-align: center;
   padding: 2vw;
+  position: relative;
 
   -webkit-column-count: 5;
   -moz-column-count: 5;
@@ -641,15 +683,54 @@ footer h1{
   -moz-column-gap: 0px;
   column-gap: 0px;
 }
+
+.gradient{
+  position: absolute;
+  background: linear-gradient(0deg, rgb(255 255 255) 30%, rgb(255 255 255 / 0%) 100%);
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 100vw;
+}
+
+.gradient h1{
+  position: absolute;
+  bottom: -4vw;
+  width: 100%;
+  font-size: 7vw;
+  font-weight: 300;
+}
+
 .main_image_columns>div{
   width: 85%;
   margin: 0 auto;
-  margin-bottom: 3vw;
+  padding-top: 10px;
+  margin-bottom: 2.5vw;
 }
 
 .main_image_columns img{
   width: 95%;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05), 0px 5px 20px rgba(20, 19, 19, 0.03), 0px 3px 5px rgba(20, 19, 19, 0.03);
 }
+
+#prototype{
+  position: relative;
+  margin-top: 26vh;
+
+}
+#prototype img{
+  width: 100%;
+  margin: 0px auto;
+  display: block;
+}
+
+#prototype .gradient{
+  background: linear-gradient(0deg, rgb(255 255 255) 30%, rgb(255 255 255 / 0%) 100%);
+  height: 100%;
+}
+
+
+
 
 /* ----- MEDIA QUERIES -----*/
 

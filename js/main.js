@@ -2,63 +2,95 @@
 ( function( $ ) {
 $( document ).ready(function() {
 
+
 // ----------------------------------- TEXT EFFECT
 
-// const text = document.querySelectorAll(".moving_effect1");
-// const halfX = window.innerWidth / 2;
-// const halfY = window.innerHeight / 2;
+/*const text = document.querySelectorAll(".moving_effect1");
+const halfX = window.innerWidth / 2;
+const halfY = window.innerHeight / 2;
 
-// text.forEach((el, i) => {
-//   TweenMax.to(el, 1, {
-//     z: 1 * (i + 8) });
+text.forEach((el, i) => {
+  TweenMax.to(el, 1, {
+    z: 1 * (i + 8) });
 
-// });
+});
 
-// document.addEventListener("mousemove", e => {
-//   text.forEach((el, i) => {
-//     TweenMax.to(el, 2.0, {
-//       x: (e.clientX - halfX) * (i + 1) * 0.001,
-//       y: (e.clientY - halfY) * (i + 1) * 0.001 });
+document.addEventListener("mousemove", e => {
+  text.forEach((el, i) => {
+    TweenMax.to(el, 2.0, {
+      x: (e.clientX - halfX) * (i + 1) * 0.001,
+      y: (e.clientY - halfY) * (i + 1) * 0.001 });
+  });
+});*/
 
-//   });
-// });
+//-------------------------------------------------------------------------
+// try to stop movie
 
-// // ------- on categories
+/*$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
 
-// const text2 = document.querySelectorAll(".category");
-// const halfX2 = window.innerWidth / 2;
-// const halfY2 = window.innerHeight / 2;
-
-// text2.forEach((el, i) => {
-//   TweenMax.to(el, 1, {
-//     z: 1 * (i + 8) });
-
-// });
-
-// document.addEventListener("mousemove", e => {
-//   text2.forEach((el, i) => {
-//     TweenMax.to(el, 2.0, {
-//       x: (e.clientX - halfX2) * (i + 1) * 0.02,
-//       y: (e.clientY - halfY2) * (i + 1) * 0.02 });
-
-//   });
-// });
-
-// ----------------------------------- add class to thumbs
-
-$(".h").hover(
-  function () {
-    $(this).addClass('hover');
-    // $(this).css("background-color", "yellow");
-  },
-  function () {
-    $(this).removeClass('hover');
-    // $(this).css("background-color", "initial");
-  },
-  );
+    if (scroll >= 500) {
+    TweenMax.to(el, 2.0, {
+      x: (e.clientX - halfX) * (i + 1) * 0,
+      y: (e.clientY - halfY) * (i + 1) * 0 });
+  };
+});*/
 
 
-// ----------------------------------- SCROLL MAGIC
+/*$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll <= 500){
+
+document.addEventListener("mousemove", e => {
+  text.forEach((el, i) => {
+    TweenMax.to(el, 2.0, {
+      x: (e.clientX - halfX) * (i + 1) * 0.001,
+      y: (e.clientY - halfY) * (i + 1) * 0.001 });
+  });
+});};
+
+});
+*/
+//-------------------------------------------------------------------------
+
+// ------- on categories
+
+/*const text2 = document.querySelectorAll(".category");
+const halfX2 = window.innerWidth / 2;
+const halfY2 = window.innerHeight / 2;
+
+text2.forEach((el, i) => {
+  TweenMax.to(el, 1, {
+    z: 1 * (i + 8) });
+
+});
+
+document.addEventListener("mousemove", e => {
+  text2.forEach((el, i) => {
+    TweenMax.to(el, 2.0, {
+      x: (e.clientX - halfX2) * (i + 1) * 0.02,
+      y: (e.clientY - halfY2) * (i + 1) * 0.02 });
+
+  });
+});*/
+
+
+// ----------------------------------- add class on hover to thumbs
+
+// $(".h").hover(
+//   function () {
+//     $(this).addClass('hover');
+//     // $(this).css("background-color", "yellow");
+//   },
+//   function () {
+//     $(this).removeClass('hover');
+//     // $(this).css("background-color", "initial");
+//   },
+//   );
+
+
+// SCROLL MAGIC
 
 // ---------------------------------- Scene - blur SOC
 
@@ -102,42 +134,38 @@ var Scene3 = new ScrollMagic.Scene({
 
 // ---------------------------------- Scene - undelining WebDesign
 
-var Scene1 = new ScrollMagic.Scene({
-    triggerElement: "#WebDesign",
-    triggerHook: 0.7, // show, when scrolled 10% into view
-    duration: 0, // hide 10% before exiting view (80% + 10% from bottom)
-    offset: 0 // move trigger to center of element
-    // reverse: false
-  })
-  .setClassToggle("#WebDesign", "undrline-active") // add class to reveal
+$('.category').each(function(){
 
-  // .addIndicators() // add indicators (requires plugin)
-  .addTo(controller);
+  // console.log(this);
 
-// ---------------------------------- Scene - undelining APP Mobile
+  var Scene4 = new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.7,
+      // reverse: false
 
-var Scene2 = new ScrollMagic.Scene({
-    triggerElement: "#mob",
-    triggerHook: 0.7
+    })
+    .setClassToggle(this, "undrline-active")
+    // .addIndicators()
+    .addTo(controller);
+});
 
-  })
-  .setClassToggle("#mob", "undrline-active")
-  // .addIndicators()
-  .addTo(controller);
+// ---------------------------------- Scene - scrolling fade opacity to 1
 
-// ---------------------------------- Scene - scrolling fade opacity to up
 
-  var Scene5 = new ScrollMagic.Scene({
-      triggerElement: "#mob",
+$('.category').each(function(){
+
+  var Scene4 = new ScrollMagic.Scene({
+      triggerElement: this,
       triggerHook: 1,
       // reverse: false
 
     })
-    .setClassToggle("#mob", "fadeup-category")
+    .setClassToggle(this, "fadeup-category")
     // .addIndicators()
     .addTo(controller);
+});
 
-// ---------------------------------- Scene - translateY to up projects
+// ---------------------------------- Scene - translateY to up thumbs
 
 $('.projects_thumbs').each(function(){
 
@@ -193,6 +221,8 @@ $('.thumbnails').slick({
     fade: true
   });
 
+//  with arrows
+
 $('.thumbs_mob').slick({
   asNavFor: '.main_image_mob',
   adaptiveHeight: 'true',
@@ -221,18 +251,6 @@ $('.thumbnails').css({
   'height':'80px'
 });
 
-// ----------------------------------- CHANGE BG COLOR
-
-// var scroll_pos = 0;
-// $(document).scroll(function() {
-//     scroll_pos = $(this).scrollTop();
-//     if(scroll_pos > 1200) {
-//         $("#home").css('background-color', '#e7e7e7');
-//     } else {
-//         $("#home").css('background-color', 'rgb(47, 35, 35)');
-//     }
-// });
-
 // ----------------------------------- Velocity JS
 
 /* $("#anchortop")
@@ -243,16 +261,61 @@ $('.thumbnails').css({
 // ----------------------------------- SMOOTH SCROLL
 
 $('.smooth').click(function(event) {
-event.preventDefault();
-var href=$(this).attr('href');
-var target=$(href);
-var top=target.offset().top;
-$('html,body').animate({
-  scrollTop: top
-}, 1000);
+
+  // $(this).mousedown(function(){
+  //   setTimeout(function(){ $(this).mouseup(); }, 5000);
+  // });
+
+  event.preventDefault();
+  var href=$(this).attr('href');
+  var target=$(href);
+  var top=target.offset().top;
+
+  $('html,body').delay(100).animate({
+    scrollTop: top
+  }, 1000);
+
 });
 
+//----------------------------------- NoHover OnScroll on the Body
+
+var timer;
+var scrolled = false;
+$(document).scroll(function(){
+    if(scrolled == false){
+        scrolled = true;
+        $(".h").addClass('disable-hover');
+    }
+
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+        $(".h").removeClass('disable-hover');
+        scrolled = false;
+     },150);
+});
 
 
 });
 } )( jQuery );
+
+
+
+// ------------------- LOTTIE
+
+// var animation = bodymovin.loadAnimation({
+//   container: document.getElementById('anim1'),
+//   renderer: 'svg',
+//   loop: true,
+//   autoplay: true,
+//   path: 'animations/Smart_spending.json'
+// })
+
+
+
+// ------- Toggle class (add/delete)
+
+/*
+$("#button").click(function() {
+  $('.transform').toggleClass('class');
+});
+*/

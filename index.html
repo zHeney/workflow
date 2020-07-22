@@ -48,7 +48,7 @@
   <div class="menu_home">
     <a href="#WebDesign" class="smooth"><p>UI/UX Web Design</p></a>
     <a href="#mob" class="smooth"><p>App/Mobile</p></a>
-    <a href="#" class="smooth"><p>Animations</p></a>
+    <a href="#animations" class="smooth"><p>Animations</p></a>
     <a href="#" class="smooth"><p>Frontend</p></a>
     <a href="#" class="smooth"><p>Graph design</p></a>
   </div>
@@ -73,44 +73,44 @@
     <h1 id="WebDesign" class="category undrline" id="web">UI/UX Web Design</h1>
     <div id="webDesign_cont" class="projects_thumbs">
 
-      <div id="Envista" class="h">
+      <div id="post3" id="Envista" class="h">
         <a href="project_3.html">
-        <h2 id="post3">Envista — Global Dental Concern</h2>
+        <!-- <h2>Envista — Global Dental Concern</h2> -->
         <img src="img/Envista/Envista.jpg" >
         </a>
       </div>
 
-      <div class="h">
+      <div id="post6" class="h">
         <a href="project_6.html">
-        <h2 id="post6">Navy Island — Gallary</h2>
+        <!-- <h2>Navy Island — Gallary</h2> -->
         <img src="img/NavyIland/Web-App-NavyIsland/WebSite/Gallery-third_page_v2.png" >
         </a>
       </div>
 
-      <div class="h">
+      <div id="post5" class="h">
         <a href="project_5.html">
-        <h2 id="post5">K-Stats — Analitics and Graphics</h2>
+        <!-- <h2>K-Stats — Analitics and Graphics</h2> -->
         <img src="img/K-Stats/K-Stats.png" >
         </a>
       </div>
 
-      <div class="h">
+      <div id="post1" class="h">
         <a href="project_1.html">
-        <h2 id="post1">Modo — Tracking System</h2>
+        <!-- <h2>Modo — Tracking System</h2> -->
         <img src="img/Modo/Modo_tracking_system.png" >
         </a>
       </div>
 
-      <div class="h">
+      <div id="post4" class="h">
         <a href="project_4.html">
-        <h2 id="post4">Citizen — London's Fintech Startup</h2>
+        <!-- <h2>Citizen — London's Fintech Startup</h2> -->
         <img src="img/Citizen/Home.png" >
         </a>
       </div>
 
-      <div class="h">
+      <div id="post2" class="h">
         <a href="project_2.html">
-        <h2 id="post2">WhatCharity — Izometric Promopage</h2>
+        <!-- <h2>WhatCharity — Izometric Promopage</h2> -->
         <img src="img/Ek/WhatCharity.jpg" >
         </a>
       </div>
@@ -145,8 +145,27 @@
 
     </div>
 
-  <!-- close .projects -->
-  </div>
+<!-- ANIMATIONS (Lottie) -->
+
+    <h1 id="animations" class="category undrline">Animations (Lottie)</h1>
+    <div id="animations_cont" class="projects_thumbs">
+
+        <div class="h">
+          <lottie-player src="animations/smart_spending.json" hover ></lottie-player>
+        </div>
+
+        <div class="h">
+          <lottie-player src="animations/Push_notifications.json" background="rgb(58, 233, 211)" autoplay loop ></lottie-player>
+        </div>
+
+        <div class="h">
+          <lottie-player src="animations/Reward_yourself.json" hover ></lottie-player>
+        </div>
+
+        <!-- <div id="anim1"></div> -->
+    </div>
+
+  </div> <!-- close section .projects -->
 
   <div class="to_top_arrow" style="height: auto;">
     <a href="body" class="smooth">
@@ -171,7 +190,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<!-- <script src="js/lottie.js"></script> -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="js/main.js"></script>
+
 
 <script>
 

@@ -1,0 +1,600 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body,hr,a,h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(../img/backgroundBody.jpg);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+}
+
+a{
+	text-decoration: none;
+	-webkit-transition: all 150ms ease-out;
+       -moz-transition: all 150ms ease-out;
+         -o-transition: all 150ms ease-out;
+            transition: all 150ms ease-out;
+}
+	a:link {
+    	color: #F3F3F1;
+	}
+	a:visited {
+    	color: #F3F3F1;
+	}
+	a:hover {
+	    color: #FFCF9F;
+	}
+	a:active {
+    	color: #E99201;
+	}
+
+hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* -------------COMMON----------------- */
+
+/*darkGray*/
+#wrapFilter, #nav, #login, #leftBlock ul li:hover{
+	background-color: #424242;
+}
+/*mainSize*/
+#header,#container{
+	max-width: 1200px;
+	min-width: 360px;
+	margin: 0 auto;
+}
+/*inlineBlocks*/
+#leftBlock, #mainBlock, #soonBlock, #newsBlock{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+}
+
+/* -------------HEADER----------------- */
+
+#header{
+	height: 90px;
+	position: relative;
+}
+	#logo{
+    	position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	min-width: 205px;
+    	width: 25%;
+    	height: 70px;
+    	background-image: url(../img/logo.png);
+    	background-repeat: no-repeat;
+	}
+	#wrapTop{ /*Правая обертка хэдера*/
+    	position: absolute;
+    	right: 0px;
+    	height: 100%;
+    	width: 75%;
+	}
+		#nav, #login{
+			box-sizing: border-box;
+			text-transform: uppercase;
+			position: absolute;
+			padding: 10px 15px 0 15px;
+			border-radius: 10px 10px 0 0;
+			height: 38px;
+			bottom: 0;
+			color: white;
+		}
+		#nav{
+			left:0;
+			margin-left: 20px;
+		}
+			#nav .inline{/*ГЛАВНАЯ*/
+				height: 100%;
+				margin-left: 5px;
+				color: #FF8000;
+				box-shadow: inset #EA7E55 0px -1px 0px 0px;
+			}
+		#login{
+			right:0;
+			margin-right: 20px;
+		}
+			#login a{/*ВХОД И РЕГИСТРАЦИЯ*/
+				display: inline-block;
+				height: 100%;
+			}
+				#login a:first-child{
+					padding-right: 5px;
+					border-right: 1px solid gray;
+				}
+				#login a:hover{
+				box-shadow: inset #EA7E55 0px -3px 0px 0px;
+				}
+
+#container{
+	background-color: rgba(255, 255, 255, 0.21);
+}
+
+	/* --------------MENU------------------ */
+
+	#leftBlock{/*Блок меню*/
+		margin-top: 10px;
+		padding-bottom: 95px;
+		width: 25%;
+		max-width: 360px;
+		min-width: 150px;
+	    border-radius: 10px 0 0 10px;
+	    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.53);
+	}
+
+		#search{
+   			background-image: url(../img/search.png);
+   			background-position: 95% 12px;
+   			background-repeat: no-repeat;
+   			padding-left: 20px;
+   			padding-right: 30px;
+   			margin: 10px 8%;
+   			width: 84%;
+   			height: 38px;
+   			border-style: solid;
+   			border-width: 1px;
+   			border-color: rgb(255, 255, 255);
+   			border-radius: 5px;
+   			background-color: rgb(255, 255, 255);
+   			box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.57);
+   			box-sizing: border-box;
+		}
+
+		#wrapFilter{/*Обертка для фильтра*/
+			text-align: center;
+		}
+			#filter{
+				display: inline-block;
+	    		vertical-align: middle;
+			}
+				#filter a{
+					padding: 14px 7px;
+	    			display: table-cell;
+					font-weight: bold;
+					vertical-align: inherit;
+				}
+					#filter a:focus{
+						box-shadow: inset #EA7E55 0px -3px 0px 0px;
+					}
+					#filter a:first-child{
+						/*padding-left:25px;*/
+					}
+			    	#filter a:nth-child(2){
+	        			border-left:1px solid #4B4B4B;
+	        			border-right:1px solid #4B4B4B;
+	      			}
+	    #wrapGenre{
+	    	padding: 0 20px 0 15px;
+	    }
+
+			#leftBlock ul{/*Список по фильтру*/
+				-webkit-column-count: 2;
+		   		-moz-column-count: 2;
+		   		column-count: 2;
+		   		-webkit-column-gap: 0px;
+		    	-moz-column-gap: 0px;
+		   		column-gap: 0px;
+		   		overflow: auto;
+				list-style: none;
+				padding: 0;
+			}
+				#leftBlock ul li{
+					padding: 0px 0px 0px 11px;
+/*					-webkit-transition: background-color 250ms ;
+		        	   -moz-transition: background-color 250ms ;
+		        	     -o-transition: background-color 250ms ;
+		        	        transition: background-color 250ms ;*/
+				}
+				#leftBlock ul li:hover{
+					background-image: url(../img/texture.png);
+					box-shadow: inset #EA7E55 3px 0px 0px 0px;
+					background-color: #424242;
+				}
+					#leftBlock ul li a{
+						display: inline-block;
+						padding: 8px 0px 8px 0px;
+						width: 100%;
+						height: 100%;
+					}
+	/* --------------RIGHT SIDE------------------ */
+
+	#mainBlock{/*Основной правый блок*/
+		position: relative;
+		background-color: #f5f5f5;
+		width: 75%;
+		margin-bottom: 50px;
+		border-radius: 10px;
+		box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.53);
+	}
+		#soonBlock, #newsBlock{
+			max-width: 500px;
+			padding-bottom: 25px;
+		}
+		#soonBlock img, #newsBlock img{
+			box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+		}
+		#soonInfoBlock h4 img{
+			box-shadow: none;
+		}
+
+		/* ---------------SOON-------------- */
+
+		#soonBlock{/*Скоро...*/
+			width: 45%;
+			box-sizing:border-box;
+			padding: 0 30px 0 0;
+		}
+			#soonHead{
+				padding: 20px 0 20px 20px;
+			}
+			#soonInfoBlock{
+				position: relative;
+				padding: 10px 0 20px 20px;
+
+			}
+				#dateText{
+					position: absolute;
+					margin-top: 11px;
+					right: 0;
+					top: 0;
+				}
+				.cal{
+					vertical-align: bottom;
+					margin-right: 5px;
+				}
+				#soonInfoBlock p{
+					padding: 10px 0 20px 0;
+				}
+				#soonInfoImage{
+					width: 100%;
+				}
+					#soonInfoImage img{
+						width: 100%;
+					}
+
+		/* -------------NEWS--------------*/
+
+		#newsBlock{/*Новости киноиндустрии*/
+			width: 55%;
+			box-sizing:border-box;
+		}
+			#newsHead{
+				position: relative;
+				width: 100%;
+				padding: 20px 0 20px 0;
+			}
+				#newsHead a{
+					position: absolute;
+					top:25px;
+					right: 0;
+					padding: 0 20px 0 0;
+				}
+
+			#newsInfoBlock{
+		   		max-height: 465px;
+	   			overflow-y: auto;
+	    		padding: 16px 20px 0px 0px;
+	    		text-align: justify;
+			}
+				.newsFilm{
+					position: relative;
+					min-height: 120px;
+					height: 120px;
+					width: 100%;
+					padding: 0 0 52px 0;
+				}
+					.newsFilm img{
+
+						vertical-align: top;
+						margin-right: 19px;
+						width: 160px;
+						height: 100%;
+					}
+					.textAboutFilm{
+						position: absolute;
+					}
+						.textAboutFilm h2{
+							margin-top: -6px;
+						}
+						.textAboutFilm p{
+							height: 45px;
+							padding: 6px 0 31px 0;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+
+		/*---------------SIMILAR FILMS-------------------*/
+
+		#similarFilms{/*Похожие фильмы*/
+			width: 100%;
+		    text-align: center;
+	        padding-bottom: 125px;
+		}
+			.wrapFilmSimilar{
+				position: relative;
+			    text-align: left;
+				display: inline-block;
+			    vertical-align: top;
+				margin: 20px 13px 50px 13px;
+				height: 288px;
+				width: 193px;
+				z-index: 1;
+			}
+				.wrapFilmSimilar:hover{
+					z-index: 10;
+				}
+				.wrapFilmSimilar h2:first-child{
+					padding-bottom: 5px;
+					text-overflow: ellipsis;
+	   				white-space: nowrap;
+	   				overflow: hidden;
+				}
+				.filmInSimilar{
+					overflow: hidden;
+					font-size: 12px;
+					border-radius: 5px;
+		 			background-color: rgb(245, 245, 245);
+		  			box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+					height: 288px;
+					width: 193px;
+					padding-bottom: 10px;
+
+					-webkit-transition: all 200ms ease-out;
+		        	   -moz-transition: all 200ms ease-out;
+		        	     -o-transition: all 200ms ease-out;
+		        	        transition: all 200ms ease-out;
+				}
+				.filmInSimilar:hover{
+					height: 360px;
+					box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5);
+				}
+					.imgFilmInSimilar{
+						border-radius: 5px;
+						height:269px;
+						width:193px;
+					}
+					.stars{
+						text-align: center;
+						padding: 6px 0;
+					}
+					.infoSilmilarFilm{
+						padding: 10px 0 0 15px;
+						height: 50px;
+						width: 100%;
+					}
+					.infoSilmilarFilm .inline{
+						height: 20px;
+						width: 80px;
+					    margin-bottom: 5px;
+					}
+						.spriteInfo{
+							display: inline-block;
+							width: 15px;
+							height: 15px;
+							background: url(../img/icoPack.png) no-repeat;
+						}
+						.infoSilmilarFilm div{
+							vertical-align: top;
+						}
+						.infoSilmilarFilm .inline:first-child div{ /*admin*/
+							background-position: 0 0;
+						}
+						.infoSilmilarFilm .inline:nth-child(2) div{
+							background-position: -17px 0;
+						}
+						.infoSilmilarFilm .inline:nth-child(3) div{
+							background-position: -36px 0;
+						}
+						.infoSilmilarFilm .inline:nth-child(4) div{
+							background-position: -55px 0;
+						}
+
+		/* -----------FOOTER NAVIGATION------------ */
+
+		#footerNavWrap{
+			text-align: center;
+			border-radius: 0 0 10px 10px;
+			height: 107px;
+			width: 100%;
+		    position: absolute;
+		    bottom: 0;
+		}
+			#footerNav{
+				vertical-align: middle;
+				height: 60px;
+				width: 300px;
+				margin-top: 21px;
+			}
+				#footerNav div, #footerNav a{
+					line-height: 34px;
+					margin: 12px 5px 0 5px;
+					display: inline-block;
+					vertical-align: top;
+					height: 35px;
+					width: 35px;
+					border-radius: 50%;
+				}
+				#footerNav .activeNav{
+					pointer-events: none;
+					cursor: default;
+					margin: 7px 5px 0 5px;
+					line-height: 45px;
+	    			font-size: 16px;
+	    			height: 45px;
+	    			width: 45px;
+	    			color: #606060;
+	    			background-color: white !important;
+	    			box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.57)
+				}
+					#footerNav a:first-child, #footerNav a:last-child{
+						font-weight: 800;
+					}
+					#footerNav a:not(:nth-child(4)){
+						background-color: #737373;
+					}
+					#footerNav a:hover{
+						background-color: #FF8000;
+					}
+
+	/* --------------MEDIA QUARIES------------------ */
+
+	/* -------------1205px-------------*/
+
+	@media all and (max-width: 1205px) {
+		.wrapFilmSimilar{
+		margin: 20px 13px 50px 13px;
+		}
+	}
+	/* -------------1080px-------------*/
+
+	@media all and (max-width: 1080px) {
+			#header {
+			    height: 130px;
+			}
+			#container, #leftBlock, #mainBlock, #header{
+				max-width: 900px;
+				width: 100%;
+			}
+				#wrapTop {
+					width: 100%;
+				}
+				#logo {
+					margin: 0 0 45px 20px;
+   				}
+   				#nav, #login{
+   					margin: 0;
+   				}
+   				#login{
+   					padding-right: 20px;
+   				}
+   				#nav{
+   					padding-left: 28px;
+   				}
+	   			#leftBlock {
+	   				padding-bottom: 0;
+	   				position: relative;
+	   			    height: 52px;
+	   			    margin: 0;
+	   			    border-radius: 10px 10px 0 0;
+	   			}
+	   				#search{
+					    right: 20px;
+					    height: 27px;
+					    width: 29%;
+					    position: absolute;
+					    margin: 10px 0;
+					    background-position: 95% 7px;
+					}
+					#wrapGenre {
+    					background-color: #323232;
+    					position: absolute;
+    					z-index: 10;
+    					border-radius: 0px 0px 10px 10px;
+					}
+						#wrapGenre ul{
+							width: 242px;
+						}
+	   			#mainBlock{
+	   				border-radius: 0 0 10px 10px;
+	   			}
+	   				#wrapFilter{
+	   					text-align: left;
+	   					padding: 0 0 0 20px;
+	   				}
+	   					#filter{
+	   						text-align: center;
+	   					}
+						#leftBlock ul{
+							display: none;
+						}
+				#newsHead a{
+					top:45px;
+				}
+	}
+	/* ------------550px--------------*/
+
+	@media all and (max-width: 550px) {
+		#container *{
+			border-radius: 0;
+			}
+			#nav{
+				border-radius: 0;
+				margin: 0;
+				width: 100%;
+				height: 38px;
+				text-transform: lowercase;
+				padding: 10px 15px 0 20px;
+			    background-color: #A52A2A;
+			}
+				#nav .inline{
+					box-shadow: none;
+				}
+			#login{
+				text-transform: lowercase;
+   				top: 0;
+   				padding: 0px 10px 0 10px;
+   				margin-right: 0px;
+   				border-radius: 0 0 10px 10px;
+   				height: 25px;
+			}
+			#search{
+				position: static;
+				border-radius: 5px;
+				margin: 10px 15%;
+				width: 70%;
+			}
+			#leftBlock, #mainBlock, #soonBlock, #newsBlock{
+				max-width: 535px;
+				display: block;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+				#leftBlock{
+					height: 94px;
+				}
+				#wrapFilter{
+			   		text-align: center;
+			   		padding: 0;
+	   			}
+	   			#wrapGenre {
+    				border-radius: 0px 0px 10px 10px;
+				}
+				#soonInfoBlock {
+					padding: 10px 20px 20px 20px;
+				}
+					#dateText{
+						position: absolute;
+						right: 20px;
+				}
+				#newsInfoBlock{
+					padding: 10px 20px 0px 20px;
+					max-height: 100%
+				}
+					#leftBlock ul{
+						display: none;
+					}
+					#newsHead h2{
+						padding: 0 0 0 20px;
+					}
+					#newsHead a{
+						top:25px;
+					}
+	}
+
+/*----------------------------------------------------*/
+
+	.texture{background-image: url(../img/texture.png);}
+	.inline{display: inline-block;}
+	.orange{color: #FF8000;}
+	.orangeLink a{color: #FF8000;}
+	.orangeLink a:hover {text-decoration: underline;}

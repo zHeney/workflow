@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src="js/modernizr-custom.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
 <link rel="stylesheet" href="css/main.css">
 
 <title>Workflow</title>
@@ -28,7 +31,7 @@
 
 <div class="container">
 
-<!-- ANIMATE Workflow TEXT ********************************** -->
+<!-- ANIMATE Workflow TEXT ............................. -->
 
   <div class="wrap" id="anchortop">
     <div class="moving_effect1">Workflow</div>
@@ -43,17 +46,17 @@
     <div class="moving_effect1">Workflow</div>
   </div>
 
-<!-- MENU SKILLS ********************************** -->
+<!-- MENU SKILLS ............................. -->
 
   <div class="menu_home">
     <a href="#WebDesign" class="smooth"><p>UI/UX Web Design</p></a>
     <a href="#mob" class="smooth"><p>App/Mobile</p></a>
     <a href="#animations" class="smooth"><p>Animations</p></a>
-    <a href="#" class="smooth"><p>Frontend</p></a>
-    <a href="#" class="smooth"><p>Graph design</p></a>
+    <a href="#frontend" class="smooth"><p>Frontend</p></a>
+    <a href="#graphdesign" class="smooth"><p>GraphDesign</p></a>
   </div>
 
-<!-- SOCIALS ********************************** -->
+<!-- SOCIALS ............................. -->
 
   <div id="socials">
     <canvas id="noise" class="noise"></canvas>
@@ -64,122 +67,181 @@
     </div>
   </div>
 
-<!-- PROJECTS ********************************** -->
+
+
+<!-- PROJECTS ............................. -->
 
   <div class="projects">
 
-<!-- UI/UX Web Design -->
+<!-- UI/UX Web Design ............................. -->
 
-    <h1 id="WebDesign" class="category undrline" id="web">UI/UX Web Design</h1>
+
+    <h1 id="WebDesign" class="category " id="web">UI/UX Web</h1>
     <div id="webDesign_cont" class="projects_thumbs">
 
+      <!-- Envista -->
       <div id="post3" id="Envista" class="h">
         <a href="project_3.html">
-        <!-- <h2>Envista — Global Dental Concern</h2> -->
-        <img src="img/Envista/Envista.jpg" >
+        <img src="assets/browser.png">
         </a>
       </div>
 
+      <!-- Navy Island — Gallary -->
       <div id="post6" class="h">
         <a href="project_6.html">
-        <!-- <h2>Navy Island — Gallary</h2> -->
-        <img src="img/NavyIland/Web-App-NavyIsland/WebSite/Gallery-third_page_v2.png" >
+        <img src="assets/browser.png">
         </a>
       </div>
 
+      <!-- K-Stats -->
       <div id="post5" class="h">
         <a href="project_5.html">
-        <!-- <h2>K-Stats — Analitics and Graphics</h2> -->
-        <img src="img/K-Stats/K-Stats.png" >
+        <img src="assets/browser.png">
         </a>
       </div>
 
+      <!-- Modo -->
       <div id="post1" class="h">
         <a href="project_1.html">
-        <!-- <h2>Modo — Tracking System</h2> -->
-        <img src="img/Modo/Modo_tracking_system.png" >
+        <img src="assets/browser.png">
         </a>
       </div>
 
+      <!-- Citizen -->
       <div id="post4" class="h">
         <a href="project_4.html">
-        <!-- <h2>Citizen — London's Fintech Startup</h2> -->
-        <img src="img/Citizen/Home.png" >
+        <img src="assets/browser.png">
         </a>
       </div>
 
+      <!-- WhatCharity -->
       <div id="post2" class="h">
         <a href="project_2.html">
-        <!-- <h2>WhatCharity — Izometric Promopage</h2> -->
-        <img src="img/Ek/WhatCharity.jpg" >
+        <img src="assets/browser.png">
         </a>
       </div>
 
     </div>
 
-<!-- APP / MOBILE -->
 
-    <h1 id="mob" class="category undrline">App/Mobile Design</h1>
+
+<!-- APP / MOBILE ............................. -->
+
+
+    <h1 id="mob" class="category ">App/Mobile</h1>
     <div id="appMob_cont" class="projects_thumbs">
 
       <div class="h">
         <a href="mob_1.html">
         <h2>Wondrin — Meetup Service</h2>
-        <img src="img/WondrinApp/portfolio/splash2x.png" >
+        <img src="img/WondrinApp/portfolio/1125x2436.png" >
         </a>
       </div>
 
       <div class="h">
         <a href="mob_2.html">
         <h2>Navy Island</h2>
-        <img src="img/NavyIland/Web-App-NavyIsland/App/05.png" >
+        <img src="img/NavyIland/Web-App-NavyIsland/App/1.png" >
         </a>
       </div>
 
       <div class="h">
         <a href="mob_3.html">
         <h2>Confablo</h2>
-        <img src="img/WorldstoresApp/portfolio/login.png" >
+        <img src="img/WorldstoresApp/portfolio/splash.png" >
         </a>
       </div>
 
     </div>
 
-<!-- ANIMATIONS (Lottie) -->
 
-    <h1 id="animations" class="category undrline">Animations (Lottie)</h1>
+
+<!-- ANIMATIONS (Lottie) ............................. -->
+
+
+    <h1 id="animations" class="category ">Animations</h1>
     <div id="animations_cont" class="projects_thumbs">
 
-        <div class="h">
-          <lottie-player src="animations/smart_spending.json" hover ></lottie-player>
-        </div>
+      <div class="h">
+        <lottie-player src="animations/smart_spending.json" hover ></lottie-player>
+      </div>
 
-        <div class="h">
-          <lottie-player src="animations/Push_notifications.json" background="rgb(58, 233, 211)" autoplay loop ></lottie-player>
-        </div>
+      <div class="h">
+        <lottie-player src="animations/Push_notifications.json" background="rgb(58, 233, 211)" autoplay loop ></lottie-player>
+      </div>
 
-        <div class="h">
-          <lottie-player src="animations/Reward_yourself.json" hover ></lottie-player>
-        </div>
+      <div class="h">
+        <lottie-player src="animations/Reward_yourself.json" hover ></lottie-player>
+      </div>
 
-        <!-- <div id="anim1"></div> -->
+      <!-- <div id="anim1"></div> -->
     </div>
 
-  </div> <!-- close section .projects -->
+
+
+<!-- FRONTEND ............................. -->
+
+
+    <h1 id="frontend" class="category ">Frontend</h1>
+    <div id="frontend_cont" class="projects_thumbs">
+
+      <div class="h">
+        <a href="frontend/test-g-bootstrap/index.html" target="_blank">
+          <img src="frontend/test-g-bootstrap/img/preview/test-g_thumb.png">
+        </a>
+      </div>
+
+      <div class="h">
+        <a href="frontend/test-p-email/index.html" target="_blank">
+          <img src="frontend/test-p-email/img/preview/test-p-email_thumb.png">
+        </a>
+      </div>
+
+     <div class="h">
+        <a href="frontend/test-u-films/index.html" target="_blank">
+          <img src="frontend/test-u-films/img/preview/test-u_thumb.png">
+        </a>
+      </div>
+
+    </div>
+
+  </div>  <!-- /.projects  -->
+
+
+
+  <!-- GRAPHDESIGN ............................. -->
+
+
+  <div class="projects">
+    <h1 id="graphdesign" class="category">GraphDesign</h1>
+  </div>
+
+  <div id="graphdesign_cont">
+
+    <div><img src="img/Graphdesign/C2.png"></div>
+    <div><img src="img/Graphdesign/E.png"></div>
+    <div><img src="img/Graphdesign/R.png"></div>
+    <div><img src="img/Graphdesign/B.png"></div>
+    <div><img src="img/Graphdesign/D.png"></div>
+    <div><img src="img/Graphdesign/A.png"></div>
+    <!-- <div><img src="img/Graphdesign/playericon.png"></div> -->
+
+  </div>
+
+  <!-- To Top  -->
 
   <div class="to_top_arrow" style="height: auto;">
     <a href="body" class="smooth">
       <svg version="1.1" id="arr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="0 0 490.671 490.671" style="enable-background:new 0 0 490.671 490.671;" xml:space="preserve">
-      <path style="fill:#807878;" d="M254.563,37.126c-3.401-5.096-10.29-6.469-15.385-3.068c-1.215,0.811-2.257,1.853-3.068,3.068
+      <path style="fill:#f71819;" d="M254.563,37.126c-3.401-5.096-10.29-6.469-15.385-3.068c-1.215,0.811-2.257,1.853-3.068,3.068
       L1.443,442.46c-2.957,5.095-1.224,11.623,3.871,14.58c1.624,0.943,3.468,1.44,5.345,1.441h469.333
       c5.891,0.007,10.672-4.764,10.679-10.655c0.002-1.885-0.495-3.737-1.441-5.367L254.563,37.126z"/>
       </svg>
     </a>
   </div>
 
-<!-- close container -->
-</div>
+</div>  <!-- /container -->
 
 </body>
 

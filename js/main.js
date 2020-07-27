@@ -108,9 +108,7 @@ var Scene0 = new ScrollMagic.Scene({
 
 // ---------------------------------- Scene - increase size SOC section
 
-// init controller
 var controller = new ScrollMagic.Controller();
-
 // build tween
 var tween = TweenMax.to("#socials", 0.5, {scale: 1.2,yoyo: true});
 // var tween = gsap.to("#socials", {duration:2, scale: 1.1,yoyo: true});
@@ -118,12 +116,12 @@ var tween = TweenMax.to("#socials", 0.5, {scale: 1.2,yoyo: true});
 // build scene and set duration to window height
 var scene = new ScrollMagic.Scene({triggerElement: "#socials", duration: "100%", offset: -300})
         .setTween(tween)
-        // .addIndicators() // add indicators (requires plugin)
+        // .addIndicators()
         .addTo(controller);
 
-// ---------------------------------- Scene - change BG (brownt-to-grey)
+// ---------------------------------- Scene - change BG
 
-var Scene3 = new ScrollMagic.Scene({
+var BG = new ScrollMagic.Scene({
     triggerElement: "#WebDesign",
     triggerHook: 0.7
 
@@ -131,6 +129,16 @@ var Scene3 = new ScrollMagic.Scene({
   .setClassToggle("#home", "greyBody")
   // .addIndicators()
   .addTo(controller);
+
+var BG = new ScrollMagic.Scene({
+    triggerElement: "#graphdesign",
+    triggerHook: 0.9
+
+  })
+  .setClassToggle("body", "blackBody")
+  // .addIndicators()
+  .addTo(controller);
+
 
 // ---------------------------------- Scene - undelining WebDesign
 
@@ -141,6 +149,7 @@ $('.category').each(function(){
   var Scene4 = new ScrollMagic.Scene({
       triggerElement: this,
       triggerHook: 0.7,
+      duration: "90%"
       // reverse: false
 
     })
@@ -182,18 +191,25 @@ $('.projects_thumbs').each(function(){
     .addTo(controller);
 });
 
-// ---------------------------------- Scene - scrolling fade opacity to up
+// ---------------------------------- Scene - graphdesign section effect
 
-  // var tween = TweenMax.fromTo("#webDesign_cont", 0.5, {autoAlpha:0}, {autoAlpha:1});
-  // var Scene5 = new ScrollMagic.Scene({
-  //     triggerElement: "#webDesign_cont",
-  //     duration: "30%",
-  //     triggerHook: 0.9
-  // })
-  //         .setTween(tween)
-  //         // .addIndicators() // add indicators (requires plugin)
-  //         .addTo(controller);
+var controller = new ScrollMagic.Controller();
+var tween = TweenMax.to("#graphdesign_cont", 0.5, {
+  autoAlpha:1,
+  y: 0,
+  x: 0,
+  yoyo: true
+});
 
+var scene = new ScrollMagic.Scene({
+  triggerElement: "#graphdesign",
+  duration: "78%",
+  offset: 100
+})
+
+  .setTween(tween)
+  // .addIndicators()
+  .addTo(controller);
 
 
 // ----------------------------------- SLICK SLIDER
@@ -230,7 +246,7 @@ $('.thumbs_mob').slick({
   variableWidth: 'true',
   // mobileFirst: 'true',
   rtl: 'true',
-  slidesToShow: 5,
+  slidesToShow: 9,
   slidesToScroll: 1,
   dots: false,
   centerMode: false,
@@ -245,6 +261,15 @@ $('.thumbs_mob').slick({
     arrows: true,
     fade: true
   });
+
+$('#graphdesign_cont').slick({
+  // dots: true,
+  infinite: true,
+  speed: 900,
+  slidesToShow: 1,
+  centerMode: true,
+  variableWidth: true
+});
 
 
 $('.thumbnails').css({

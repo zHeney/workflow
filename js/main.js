@@ -135,7 +135,7 @@ var BG = new ScrollMagic.Scene({
     triggerHook: 0.9
 
   })
-  .setClassToggle("body", "blackBody")
+  .setClassToggle("#home", "blackBody")
   // .addIndicators()
   .addTo(controller);
 
@@ -302,23 +302,25 @@ $('.smooth').click(function(event) {
 
 });
 
-//----------------------------------- NoHover OnScroll on the Body
+//----------------------------------- Disable hover OnScroll on the Body
 
-var timer;
-var scrolled = false;
-$(document).scroll(function(){
-    if(scrolled == false){
-        scrolled = true;
-        $(".h").addClass('disable-hover');
-    }
+// var timer;
+// var scrolled = false;
+// $(document).scroll(function(){
+//     if(scrolled == false){
+//         scrolled = true;
+//         $(".h").addClass('disable-hover');
+//     }
 
-    clearTimeout(timer);
-    timer = setTimeout(function(){
-        $(".h").removeClass('disable-hover');
-        scrolled = false;
-     },150);
-});
+//     clearTimeout(timer);
+//     timer = setTimeout(function(){
+//         $(".h").removeClass('disable-hover');
+//         scrolled = false;
+//      },150);
+// });
 
+
+//----------------------------------- Disable hover OnScroll on the Body
 
 });
 } )( jQuery );

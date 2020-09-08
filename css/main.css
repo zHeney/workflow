@@ -331,6 +331,7 @@ a{text-decoration: none;}
 
 .h {
 
+  position: relative;
   margin-bottom: 10vw;
   display: inline-block;
   border-radius: 6px;
@@ -342,7 +343,7 @@ a{text-decoration: none;}
   transform: rotateY( -2deg ) rotateX( 10deg ) skew(2deg, 2deg) rotate(2deg);
   border-right: solid #d2cfcf 7px;
   border-top: solid #ffffff 7px;
-  box-shadow: 50px 40px 106px rgba(47, 35, 35, 0.19), 10px 15px 20px rgba(47, 35, 35, 0.09), 3px 4px 5px rgba(47, 35, 35, 0.02);
+  box-shadow: 40px 20px 56px rgb(47 35 35 / 0.11), 10px 15px 20px rgba(47, 35, 35, 0.02), 3px 4px 5px rgba(47, 35, 35, 0.02);
 }
 
     .h:hover {
@@ -360,7 +361,7 @@ a{text-decoration: none;}
       color: #525252;
       position: absolute;
       white-space: pre;
-      content: "Hello";
+      /*content: "Hello";*/
       opacity: 0;
       height: 5px;
       top: -30px;
@@ -368,10 +369,6 @@ a{text-decoration: none;}
       left: 0;
       transition: all 0.3s ease-out;
     }
-
-        #webDesign_cont .h:nth-child(1):before{
-          content: "Project name: Envista\A Task: make promo page for site opening.";
-        }
 
     .h:hover:before {
 
@@ -389,6 +386,28 @@ a{text-decoration: none;}
 
     .h img { width: 100%; }
 
+    .h span, .frontend_sect span {
+
+      position: absolute;
+      opacity: 0;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #525252;
+      width: 100%;
+      height: 100%;
+      top: -55px;
+      right: 0;
+      left: 0;
+      transition: all 0.3s ease-out;
+
+    }
+
+    .h:hover span {
+
+      opacity: 1;
+      top: -6vmin;
+      /*pointer-events: none;*/
+    }
 
 
 /* ------ WED DESIGN -------*/
@@ -399,6 +418,7 @@ a{text-decoration: none;}
 
   height: 22vw;
   width: 44%;
+  box-shadow: inset 0em 1px white;
 }
 
 #webDesign_cont>div:nth-child(1) { background-image: url(../img/Envista/Envista.jpg); }
@@ -475,7 +495,7 @@ a{text-decoration: none;}
       #appMob_cont .h:hover {
 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(20, 19, 19, 0.03), 0 1px 1px rgba(20, 19, 19, 0.03);
-        margin-top: -20px;
+        margin-top: -1vmin;
     }
 
     #appMob_cont>div:nth-child(1), #appMob_cont>div:nth-child(3) {
@@ -545,10 +565,10 @@ lottie-player {
   #animations_cont .h:nth-child(2) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(20, 19, 19, 0.03), 0 1px 1px rgba(20, 19, 19, 0.03);
   }
-  #animations_cont .h:hover {
+  #animations_cont .h:hover, #frontend_cont .h:hover {
 
     transform: rotateY( 0deg ) translateY(2px) rotateX( 0deg ) skew(0deg, 0deg) rotate(0deg);
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(20, 19, 19, 0.03), 0 1px 1px rgba(20, 19, 19, 0.03);
   }
@@ -565,10 +585,41 @@ lottie-player {
 
 
 
+#frontend_cont {
+
+  flex-direction: column;
+  align-content: center;
+}
+
+#frontend_cont .h:nth-child(2) {
+
+  /*align-self: flex-end;*/
+}
+
 #frontend_cont .h {
 
-  width: 35vmin;
-  height: 35vmin;
+  /*width: 75vmin;*/
+  /*height: 35vmin;*/
+  margin-bottom: 17vw;
+  transform: rotate( 0deg );
+  border-right: solid #d2cfcf 0px;
+  border-top: solid #ffffff 0px;
+
+}
+
+#frontend_cont .h a{
+
+  overflow: hidden;
+}
+.frontend_sect {
+  position: relative;
+}
+
+.frontend_sect span{
+  top: -10vmin;
+  height: auto;
+  opacity: 1;
+  width: auto;
 }
 
 
@@ -838,6 +889,8 @@ footer h1{
 
 /* ----- MEDIA QUERIES -----*/
 
+
+
 @media all and (max-width: 1600px){
 
   .wrap {
@@ -851,9 +904,15 @@ footer h1{
     top: 0;
   }
 
+  #webDesign_cont .h span{
+    /*text-align: left;*/
+    display: none;
+  }
+
+
   #appMob_cont>div:nth-child(1), #appMob_cont>div:nth-child(3) {
 
-    width: 20vmin;
+    width: 25vmin;
     top: 5vmin;
   }
 
@@ -868,7 +927,7 @@ footer h1{
     }
     #appMob_cont>div:nth-child(2) {
 
-      width: 25vmin;
+      width: 31vmin;
     }
     #appMob_cont>div:nth-child(3) {
 

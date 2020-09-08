@@ -221,7 +221,7 @@ $('.thumbnails').slick({
   variableWidth: 'true',
   // mobileFirst: 'true',
   rtl: 'true',
-  slidesToShow: 5,
+  slidesToShow: 10,
   slidesToScroll: 1,
   dots: false,
   centerMode: false,
@@ -263,7 +263,7 @@ $('.thumbs_mob').slick({
   });
 
 $('#graphdesign_cont').slick({
-  // dots: true,
+  mobileFirst: 'true',
   infinite: true,
   speed: 900,
   slidesToShow: 1,

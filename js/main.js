@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
 // ----------------------------------- TEXT EFFECT
 
-/*const text = document.querySelectorAll(".moving_effect1");
+const text = document.querySelectorAll(".moving_effect1");
 const halfX = window.innerWidth / 2;
 const halfY = window.innerHeight / 2;
 
@@ -21,7 +21,7 @@ document.addEventListener("mousemove", e => {
       x: (e.clientX - halfX) * (i + 1) * 0.001,
       y: (e.clientY - halfY) * (i + 1) * 0.001 });
   });
-});*/
+});
 
 //-------------------------------------------------------------------------
 // try to stop movie
@@ -56,7 +56,7 @@ document.addEventListener("mousemove", e => {
 
 // ------- on categories
 
-/*const text2 = document.querySelectorAll(".category");
+const text2 = document.querySelectorAll(".category");
 const halfX2 = window.innerWidth / 2;
 const halfY2 = window.innerHeight / 2;
 
@@ -73,7 +73,7 @@ document.addEventListener("mousemove", e => {
       y: (e.clientY - halfY2) * (i + 1) * 0.02 });
 
   });
-});*/
+});
 
 
 // ----------------------------------- add class on hover to thumbs

@@ -343,7 +343,7 @@ a{text-decoration: none;}
   transform: rotateY( -2deg ) rotateX( 10deg ) skew(2deg, 2deg) rotate(2deg);
   border-right: solid #d2cfcf 7px;
   border-top: solid #ffffff 7px;
-  box-shadow: 40px 20px 56px rgb(47 35 35 / 0.11), 10px 15px 20px rgba(47, 35, 35, 0.02), 3px 4px 5px rgba(47, 35, 35, 0.02);
+  box-shadow: 40px 20px 56px rgba(47, 35, 35, 0.11), 10px 15px 20px rgba(47, 35, 35, 0.02), 3px 4px 5px rgba(47, 35, 35, 0.02), inset 0px 2px white;
 }
 
     .h:hover {
@@ -494,8 +494,24 @@ a{text-decoration: none;}
     }
       #appMob_cont .h:hover {
 
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(20, 19, 19, 0.03), 0 1px 1px rgba(20, 19, 19, 0.03);
+        box-shadow: 50px 50px 106px -50px rgba(47, 35, 35, 0.19), 10px 15px 20px rgba(47, 35, 35, 0.09), 3px 4px 5px rgba(47, 35, 35, 0.02);
         margin-top: -1vmin;
+    }
+
+    #appMob_cont .h:hover:nth-child(1){
+      transform: rotateY( -2deg ) rotateX( 10deg ) skew(2deg, 2deg) rotate(2deg);
+      border-right: solid #d2cfcf 7px;
+      border-top: solid #ffffff 7px;
+    }
+
+
+    #appMob_cont .h:hover:nth-child(2){
+      border-top: solid #ffffff 7px;
+    }
+
+    #appMob_cont .h:hover:nth-child(3){
+      border-left: solid #ffffff 7px;
+      border-top: solid #ffffff 7px;
     }
 
     #appMob_cont>div:nth-child(1), #appMob_cont>div:nth-child(3) {
@@ -511,11 +527,18 @@ a{text-decoration: none;}
     #appMob_cont>div:nth-child(2) {
 
       width: 39vh;
+      transform: rotateY( 0deg ) rotateX( 0deg ) skew(0deg, 0deg) rotate(0deg);
+      border-right: solid #d2cfcf 0px;
+      z-index: 1;
     }
 
     #appMob_cont>div:nth-child(3) {
 
       right: 0;
+      transform: rotateY( 2deg ) rotateX( -10deg ) skew(-2deg, -2deg) rotate(-2deg);
+      border-right: solid #d2cfcf 0px;
+      border-top: solid #ffffff 7px;
+      border-left: solid #fffefe 7px;
     }
 
     #appMob_cont .h img {
@@ -600,10 +623,12 @@ lottie-player {
 
   /*width: 75vmin;*/
   /*height: 35vmin;*/
-  margin-bottom: 17vw;
+  margin-bottom: 16vw;
   transform: rotate( 0deg );
   border-right: solid #d2cfcf 0px;
   border-top: solid #ffffff 0px;
+  overflow: hidden;
+  border-radius: 0px;
 
 }
 
@@ -928,10 +953,16 @@ footer h1{
     #appMob_cont>div:nth-child(2) {
 
       width: 31vmin;
+      transform: rotateY( 0deg ) rotateX( 0deg ) skew(0deg, 0deg) rotate(0deg);
+      border-right: solid #d2cfcf 0px;
     }
     #appMob_cont>div:nth-child(3) {
 
       right: 3vmin;
+      transform: rotateY( 2deg ) rotateX( -10deg ) skew(-2deg, -2deg) rotate(-2deg);
+      border-right: solid #d2cfcf 0px;
+      border-top: solid #ffffff 7px;
+      border-left: solid #fffefe 7px;
     }
 
 }

@@ -421,7 +421,7 @@ a{text-decoration: none;}
   box-shadow: inset 0em 1px white;
 }
 
-#webDesign_cont>div:nth-child(1) { background-image: url(../img/Envista/Envista.jpg); }
+#webDesign_cont>div:nth-child(1) { background-image: url(../img/Envista/thumb.png); }
 #webDesign_cont>div:nth-child(1):hover{
   background-position-y: -35vw;
   transition: all 0.3s ease-out, background-position 2s cubic-bezier(.26,.45,.5,1.04) 500ms;
@@ -429,7 +429,7 @@ a{text-decoration: none;}
 
 #webDesign_cont>div:nth-child(2)
   {
-    background-image: url(../img/NavyIland/Web-App-NavyIsland/WebSite/Gallery-third_page_v2.png);
+    background-image: url(../img/NavyIland/thumb.png);
   }
   #webDesign_cont>div:nth-child(2):hover{
     background-position-y: 2.3vw;
@@ -437,7 +437,7 @@ a{text-decoration: none;}
 
 #webDesign_cont>div:nth-child(3)
   {
-    background-image: url(../img/K-Stats/K-Stats.png);
+    background-image: url(../img/K-Stats/thumb.png);
   }
   #webDesign_cont>div:nth-child(3):hover{
     background-position-y: -10vw;
@@ -445,7 +445,7 @@ a{text-decoration: none;}
 
 #webDesign_cont>div:nth-child(4)
   {
-    background-image: url(../img/Modo/Modo_tracking_system.png);
+    background-image: url(../img/Modo/thumb.png);
   }
   #webDesign_cont>div:nth-child(4):hover{
     background-position-y: 0.7vw;
@@ -453,7 +453,7 @@ a{text-decoration: none;}
 
 #webDesign_cont>div:nth-child(5)
   {
-    background-image: url(../img/Citizen/Home.png);
+    background-image: url(../img/Citizen/thumb.png);
   }
   #webDesign_cont>div:nth-child(5):hover{
     background-position-y: -28vw;
@@ -462,7 +462,7 @@ a{text-decoration: none;}
 
 #webDesign_cont>div:nth-child(6)
   {
-    background-image: url(../img/Ek/WhatCharity.jpg);
+    background-image: url(../img/Ek/thumb.png);
     transition: all 0.3s ease-out, background-position 2s cubic-bezier(.26,.45,.5,1.04) 500ms;
   }
   #webDesign_cont>div:nth-child(6):hover{
@@ -582,7 +582,7 @@ lottie-player {
     border-top: solid #ffffff 0;
     border-radius: 50%;
     margin: 0 2vw 10vw 2vw;
-    box-shadow: 50px 50px 106px -50px rgba(47, 35, 35, 0.19), 10px 15px 20px rgba(47, 35, 35, 0.09), 3px 4px 5px rgba(47, 35, 35, 0.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(20, 19, 19, 0.03), 0 1px 1px rgba(20, 19, 19, 0.03);
   }
 
   #animations_cont .h:nth-child(2) {
@@ -590,8 +590,7 @@ lottie-player {
   }
   #animations_cont .h:hover, #frontend_cont .h:hover {
 
-    transform: rotateY( 0deg ) translateY(2px) rotateX( 0deg ) skew(0deg, 0deg) rotate(0deg);
-    /*overflow: hidden;*/
+    /*transform: rotateY( 0deg ) translateY(2px) rotateX( 0deg ) skew(0deg, 0deg) rotate(0deg);*/
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(20, 19, 19, 0.03), 0 1px 1px rgba(20, 19, 19, 0.03);
   }
@@ -680,6 +679,57 @@ lottie-player {
   width: 40px;
   margin: 220px 0 80px 0;
 }
+
+
+
+/* ---------- Footer --------- */
+
+
+.footer_home div{
+
+  height: 100px;
+}
+
+.footer_home {
+
+  margin-top: 8vmin;
+}
+
+.footer_home>div {
+
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer_home>div>div {
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-family: 'Kanit', sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  color: #d2d1d1;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* --------------------------- PAGES -----------------------------*/
 
@@ -910,6 +960,40 @@ footer h1{
 }
 
 
+/* ---------- Slick slider ----------- */
+
+.slick-prev, .slick-next {
+    width: 0;
+    top: 37vh;
+    z-index: 2;
+}
+
+.slick-next {
+    right: 25vw;
+}
+
+.slick-prev {
+    left: 25vw;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 6vh;
+    color: #cc442d;
+}
+
+#graphdesign_cont .slick-prev, #graphdesign_cont .slick-next {
+    top: 50vh;
+}
+
+#graphdesign_cont .slick-prev:before, #graphdesign_cont .slick-next:before { color: #ff5353; }
+
+#graphdesign_cont .slick-next {
+    right: 3vmin;
+}
+
+#graphdesign_cont .slick-prev {
+    left: 3vmin;
+}
 
 
 /* ----- MEDIA QUERIES -----*/
@@ -933,7 +1017,6 @@ footer h1{
     /*text-align: left;*/
     display: none;
   }
-
 
   #appMob_cont>div:nth-child(1), #appMob_cont>div:nth-child(3) {
 
@@ -964,6 +1047,29 @@ footer h1{
       border-top: solid #ffffff 7px;
       border-left: solid #fffefe 7px;
     }
+
+}
+
+@media all and (max-width: 1200px){
+
+  .thumbs_mob, .thumbnails{
+    display: none;
+  }
+
+  .slick-next {
+    right: 6vw;
+  }
+
+  .slick-prev {
+    left: 6vw;
+  }
+
+  #appMob_cont>div:nth-child(1), #appMob_cont>div:nth-child(2), #appMob_cont>div:nth-child(3) {
+
+    width: 21vmin;
+    top: 5vmin;
+  }
+
 
 }
 
@@ -1018,46 +1124,12 @@ footer h1{
     width: 65vmin;
     height: 65vmin;
   }
+
   lottie-player {
     width: 65vmin;
     height: 65vmin;
   }
 
-}
-
-/* ---------- Slick slider ----------- */
-
-.slick-prev, .slick-next {
-    width: 0;
-    top: 37vh;
-    z-index: 2;
-}
-
-.slick-next {
-    right: 25vw;
-}
-
-.slick-prev {
-    left: 25vw;
-}
-
-.slick-prev:before, .slick-next:before {
-    font-size: 6vh;
-    color: #cc442d;
-}
-
-#graphdesign_cont .slick-prev, #graphdesign_cont .slick-next {
-    top: 50vh;
-}
-
-#graphdesign_cont .slick-prev:before, #graphdesign_cont .slick-next:before { color: #ff5353; }
-
-#graphdesign_cont .slick-next {
-    right: 3vmin;
-}
-
-#graphdesign_cont .slick-prev {
-    left: 3vmin;
 }
 
 

@@ -56,7 +56,7 @@ document.addEventListener("mousemove", e => {
 
 // ------- on categories
 
-const text2 = document.querySelectorAll(".category");
+/*const text2 = document.querySelectorAll(".category");
 const halfX2 = window.innerWidth / 2;
 const halfY2 = window.innerHeight / 2;
 
@@ -73,7 +73,7 @@ document.addEventListener("mousemove", e => {
       y: (e.clientY - halfY2) * (i + 1) * 0.02 });
 
   });
-});
+});*/
 
 
 // ----------------------------------- add class on hover to thumbs

@@ -23,72 +23,6 @@ document.addEventListener("mousemove", e => {
   });
 });
 
-//-------------------------------------------------------------------------
-// try to stop movie
-
-/*$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 500) {
-    TweenMax.to(el, 2.0, {
-      x: (e.clientX - halfX) * (i + 1) * 0,
-      y: (e.clientY - halfY) * (i + 1) * 0 });
-  };
-});*/
-
-
-/*$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll <= 500){
-
-document.addEventListener("mousemove", e => {
-  text.forEach((el, i) => {
-    TweenMax.to(el, 2.0, {
-      x: (e.clientX - halfX) * (i + 1) * 0.001,
-      y: (e.clientY - halfY) * (i + 1) * 0.001 });
-  });
-});};
-
-});
-*/
-//-------------------------------------------------------------------------
-
-// ------- on categories
-
-/*const text2 = document.querySelectorAll(".category");
-const halfX2 = window.innerWidth / 2;
-const halfY2 = window.innerHeight / 2;
-
-text2.forEach((el, i) => {
-  TweenMax.to(el, 1, {
-    z: 1 * (i + 8) });
-
-});
-
-document.addEventListener("mousemove", e => {
-  text2.forEach((el, i) => {
-    TweenMax.to(el, 2.0, {
-      x: (e.clientX - halfX2) * (i + 1) * 0.02,
-      y: (e.clientY - halfY2) * (i + 1) * 0.02 });
-
-  });
-});*/
-
-
-// ----------------------------------- add class on hover to thumbs
-
-// $(".h").hover(
-//   function () {
-//     $(this).addClass('hover');
-//     // $(this).css("background-color", "yellow");
-//   },
-//   function () {
-//     $(this).removeClass('hover');
-//     // $(this).css("background-color", "initial");
-//   },
-//   );
-
 
 // SCROLL MAGIC
 
@@ -121,6 +55,7 @@ var scene = new ScrollMagic.Scene({triggerElement: "#socials", duration: "100%",
 
 // ---------------------------------- Scene - change BG
 
+// WebDesign
 var BG = new ScrollMagic.Scene({
     triggerElement: "#WebDesign",
     triggerHook: 0.7
@@ -130,6 +65,27 @@ var BG = new ScrollMagic.Scene({
   // .addIndicators()
   .addTo(controller);
 
+// animations
+var BG = new ScrollMagic.Scene({
+    triggerElement: "#animations",
+    triggerHook: 0.7
+
+  })
+  .setClassToggle("#home", "whiteBody")
+  // .addIndicators()
+  .addTo(controller);
+
+/*// frontend
+var BG = new ScrollMagic.Scene({
+    triggerElement: "#frontend",
+    triggerHook: 0.7
+
+  })
+  .setClassToggle("#home", "brownBody")
+  // .addIndicators()
+  .addTo(controller);*/
+
+// graphdesign
 var BG = new ScrollMagic.Scene({
     triggerElement: "#graphdesign",
     triggerHook: 0.9
@@ -191,20 +147,35 @@ $('.projects_thumbs').each(function(){
     .addTo(controller);
 });
 
+// ---------------------------------- Scene - translateY to up I CAN DO
+
+  var Skills = new ScrollMagic.Scene({
+      triggerElement: ".skills_wrap",
+      triggerHook: 0.8,
+      // duration: "90%"
+      // reverse: false
+
+    })
+    .setClassToggle(".skills_wrap", "fadeup")
+    // .addIndicators()
+    .addTo(controller);
+
+
 // ---------------------------------- Scene - graphdesign section effect
 
 var controller = new ScrollMagic.Controller();
 var tween = TweenMax.to("#graphdesign_cont", 0.5, {
   autoAlpha:1,
-  y: 0,
-  x: 0,
+  // y: 0,
+  // x: 0,
   yoyo: true
 });
 
 var scene = new ScrollMagic.Scene({
   triggerElement: "#graphdesign",
-  duration: "78%",
-  offset: 100
+  triggerHook: 0,
+  duration: "55%"
+  // offset: 1
 })
 
   .setTween(tween)
@@ -230,10 +201,12 @@ $('.thumbnails').slick({
 
   $('.main_image').slick({
     asNavFor: '.thumbnails',
+    adaptiveHeight: true,
     draggable: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    dots: true,
     fade: true
   });
 
@@ -258,7 +231,8 @@ $('.thumbs_mob').slick({
     draggable: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
+    dots: true,
     fade: true
   });
 
@@ -268,6 +242,7 @@ $('#graphdesign_cont').slick({
   speed: 900,
   slidesToShow: 1,
   centerMode: true,
+  arrows: false,
   variableWidth: true
 });
 
@@ -276,12 +251,7 @@ $('.thumbnails').css({
   'height':'80px'
 });
 
-// ----------------------------------- Velocity JS
 
-/* $("#anchortop")
-      .velocity("transition.slideUpIn", { stagger: 250 }, 1250)
-      .delay(650);
-*/
 
 // ----------------------------------- SMOOTH SCROLL
 
@@ -302,25 +272,25 @@ $('.smooth').click(function(event) {
 
 });
 
-//----------------------------------- Disable hover OnScroll on the Body
-
-// var timer;
-// var scrolled = false;
-// $(document).scroll(function(){
-//     if(scrolled == false){
-//         scrolled = true;
-//         $(".h").addClass('disable-hover');
-//     }
-
-//     clearTimeout(timer);
-//     timer = setTimeout(function(){
-//         $(".h").removeClass('disable-hover');
-//         scrolled = false;
-//      },150);
-// });
 
 
-//----------------------------------- Disable hover OnScroll on the Body
+//----------------------------------- Popup about
+
+$(".about_trigger").click(function() {
+  $('.project_wrap').toggleClass('about_show');
+});
+$(".close_popup").click(function() {
+  $('.project_wrap').removeClass('about_show');
+});
+$(".project-background").click(function() {
+  $('.project_wrap').removeClass('about_show');
+});
+
+
+$(".a").hover(function() {
+  $('.b').toggleClass('c');
+});
+
 
 });
 } )( jQuery );
@@ -345,4 +315,44 @@ $('.smooth').click(function(event) {
 $("#button").click(function() {
   $('.transform').toggleClass('class');
 });
+*/
+
+
+// ------- add class on hover to thumbs
+
+// $(".h").hover(
+//   function () {
+//     $(this).addClass('hover');
+//     // $(this).css("background-color", "yellow");
+//   },
+//   function () {
+//     $(this).removeClass('hover');
+//     // $(this).css("background-color", "initial");
+//   },
+//   );
+
+
+//------- Disable hover OnScroll on the Body
+
+// var timer;
+// var scrolled = false;
+// $(document).scroll(function(){
+//     if(scrolled == false){
+//         scrolled = true;
+//         $(".h").addClass('disable-hover');
+//     }
+
+//     clearTimeout(timer);
+//     timer = setTimeout(function(){
+//         $(".h").removeClass('disable-hover');
+//         scrolled = false;
+//      },150);
+// });
+
+
+// ------- Velocity JS
+
+/* $("#anchortop")
+      .velocity("transition.slideUpIn", { stagger: 250 }, 1250)
+      .delay(650);
 */

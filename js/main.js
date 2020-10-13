@@ -24,6 +24,28 @@ document.addEventListener("mousemove", e => {
 });
 
 
+// ----------------------------------- TEXT EFFECT
+
+const text2 = document.querySelectorAll("#ican");
+const halfX2 = window.innerWidth / 2;
+const halfY2 = window.innerHeight / 2;
+
+text2.forEach((el, i) => {
+  TweenMax.to(el, 1, {
+    z: 1 * (i + 8) });
+
+});
+
+document.addEventListener("mousemove", e => {
+  text2.forEach((el, i) => {
+    TweenMax.to(el, 2.0, {
+      x: (e.clientX - halfX2) * (i + 1) * 0.02,
+      y: (e.clientY - halfY2) * (i + 1) * 0.02 });
+  });
+});
+
+
+
 // SCROLL MAGIC
 
 // ---------------------------------- Scene - blur SOC
@@ -32,8 +54,8 @@ var controller = new ScrollMagic.Controller();
 
 var Scene0 = new ScrollMagic.Scene({
     triggerElement: "#socials",
-    triggerHook: 0.4,
-    reverse: true
+    duration: "65%",
+    triggerHook: 0.4
 
   })
   .setClassToggle(".socials", "m-socials")
@@ -44,14 +66,23 @@ var Scene0 = new ScrollMagic.Scene({
 
 var controller = new ScrollMagic.Controller();
 // build tween
-var tween = TweenMax.to("#socials", 0.5, {scale: 1.2,yoyo: true});
+var tween = TweenMax.to("#socials",
+    0.5, {
+    scale: 1.2,
+    repeat:1,
+    yoyo: true
+    });
 // var tween = gsap.to("#socials", {duration:2, scale: 1.1,yoyo: true});
 
-// build scene and set duration to window height
-var scene = new ScrollMagic.Scene({triggerElement: "#socials", duration: "100%", offset: -300})
-        .setTween(tween)
-        // .addIndicators()
-        .addTo(controller);
+var scene = new ScrollMagic.Scene({
+    triggerElement: "#socials",
+    duration: "130%",
+    offset: -300
+
+    })
+    .setTween(tween)
+    // .addIndicators()
+    .addTo(controller);
 
 // ---------------------------------- Scene - change BG
 
@@ -160,6 +191,20 @@ $('.projects_thumbs').each(function(){
     // .addIndicators()
     .addTo(controller);
 
+
+// ---------------------------------- Scene - blur About scroll icon
+
+var controller = new ScrollMagic.Controller();
+
+var Scene0 = new ScrollMagic.Scene({
+    triggerElement: ".about",
+    // duration: "15%",
+    triggerHook: 0.4
+
+  })
+  .setClassToggle(".scroll-down lottie-player", "blur")
+  // .addIndicators()
+  .addTo(controller);
 
 // ---------------------------------- Scene - graphdesign section effect
 
@@ -300,11 +345,11 @@ $(".a").hover(function() {
 // ------------------- LOTTIE
 
 // var animation = bodymovin.loadAnimation({
-//   container: document.getElementById('anim1'),
+//   container: document.getElementById('scroll-down'),
 //   renderer: 'svg',
 //   loop: true,
 //   autoplay: true,
-//   path: 'animations/Smart_spending.json'
+//   path: 'assets/scroll-down-icon.json'
 // })
 
 

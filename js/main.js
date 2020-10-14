@@ -39,8 +39,8 @@ text2.forEach((el, i) => {
 document.addEventListener("mousemove", e => {
   text2.forEach((el, i) => {
     TweenMax.to(el, 2.0, {
-      x: (e.clientX - halfX2) * (i + 1) * 0.02,
-      y: (e.clientY - halfY2) * (i + 1) * 0.02 });
+      x: (e.clientX - halfX2) * (i + 1) * 0.015,
+      y: (e.clientY - halfY2) * (i + 1) * 0.015 });
   });
 });
 

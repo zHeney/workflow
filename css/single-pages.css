@@ -75,7 +75,7 @@
 
 .project_wrap {
 
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -99,7 +99,7 @@
 .project_about {
 
   position: absolute;
-  width: 78vw;
+  width: 960px;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -113,12 +113,20 @@
   margin-bottom: 0;
   top: 0;
   position: absolute;
-  padding: 8vw 13vw;
+  padding: 5vw 5vw;
   border-radius: 3px;
   background: white;
   height: 65vh;
+  width: 100%;
   overflow: auto;
+  font-size: 22px;
+  letter-spacing: 0;
   box-shadow: 40px 20px 56px rgba(47, 35, 35, 0.11), 10px 15px 20px rgba(47, 35, 35, 0.02), 3px 4px 5px rgba(47, 35, 35, 0.02);
+  }
+
+.project_about p a {
+
+  text-decoration: underline;
   }
 
   .about_show {

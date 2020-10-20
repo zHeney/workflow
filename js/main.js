@@ -48,12 +48,30 @@ document.addEventListener("mousemove", e => {
 
 // SCROLL MAGIC
 
-// ---------------------------------- Scene - blur SOC
+// ---------------------------------- About p fade out - Scene
+
+var controller = new ScrollMagic.Controller();
+var tween = TweenMax.to(".about p", 0.5, {
+  autoAlpha:0,
+  yoyo: true
+});
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".about p",
+  triggerHook: 0.3,
+  duration: "55%"
+})
+
+  .setTween(tween)
+  // .addIndicators()
+  .addTo(controller);
+
+// ---------------------------------- Blur SOC - Scene
 
 var controller = new ScrollMagic.Controller();
 
 var Scene0 = new ScrollMagic.Scene({
-    triggerElement: "#socials",
+    triggerElement: "#trigger-socials",
     duration: "65%",
     triggerHook: 0.4
 
@@ -62,7 +80,7 @@ var Scene0 = new ScrollMagic.Scene({
   // .addIndicators()
   .addTo(controller);
 
-// ---------------------------------- Scene - increase size SOC section
+// ---------------------------------- Increase size SOC section - Scene
 
 var controller = new ScrollMagic.Controller();
 // build tween
@@ -84,7 +102,7 @@ var scene = new ScrollMagic.Scene({
     // .addIndicators()
     .addTo(controller);
 
-// ---------------------------------- Scene - change BG
+// ---------------------------------- Change BG - Scene
 
 // WebDesign
 var BG = new ScrollMagic.Scene({
@@ -127,7 +145,7 @@ var BG = new ScrollMagic.Scene({
   .addTo(controller);
 
 
-// ---------------------------------- Scene - undelining WebDesign
+// ---------------------------------- Undelining WebDesign - Scene
 
 $('.category').each(function(){
 
@@ -145,10 +163,10 @@ $('.category').each(function(){
     .addTo(controller);
 });
 
-// ---------------------------------- Scene - scrolling fade opacity to 1
+// ---------------------------------- Scrolling fade opacity to 1 - Scene
 
 
-$('.category').each(function(){
+$('.category, .projects p').each(function(){
 
   var Scene4 = new ScrollMagic.Scene({
       triggerElement: this,
@@ -161,7 +179,7 @@ $('.category').each(function(){
     .addTo(controller);
 });
 
-// ---------------------------------- Scene - translateY to up thumbs
+// ---------------------------------- TranslateY to up thumbs - Scene
 
 $('.projects_thumbs').each(function(){
 
@@ -170,7 +188,6 @@ $('.projects_thumbs').each(function(){
   var Scene4 = new ScrollMagic.Scene({
       triggerElement: this.children[0],
       triggerHook: 1,
-      // reverse: false
 
     })
     .setClassToggle(this, "fadeup")
@@ -178,13 +195,12 @@ $('.projects_thumbs').each(function(){
     .addTo(controller);
 });
 
-// ---------------------------------- Scene - translateY to up I CAN DO
+// ---------------------------------- TranslateY to up I CAN DO - Scene
 
   var Skills = new ScrollMagic.Scene({
       triggerElement: ".skills_wrap",
       triggerHook: 0.8,
       // duration: "90%"
-      // reverse: false
 
     })
     .setClassToggle(".skills_wrap", "fadeup")
@@ -192,12 +208,12 @@ $('.projects_thumbs').each(function(){
     .addTo(controller);
 
 
-// ---------------------------------- Scene - scrolldown
+// ---------------------------------- Scrolldown in header - Scene
 
 var controller = new ScrollMagic.Controller();
 
 var Scene0 = new ScrollMagic.Scene({
-    triggerElement: ".about",
+    triggerElement: "#trigger-about",
     // duration: "15%",
     triggerHook: 0.4
 
@@ -206,7 +222,7 @@ var Scene0 = new ScrollMagic.Scene({
   // .addIndicators()
   .addTo(controller);
 
-// ---------------------------------- Scene - graphdesign section effect
+// ---------------------------------- Graphdesign section effect - Scene
 
 var controller = new ScrollMagic.Controller();
 var tween = TweenMax.to("#graphdesign_cont", 0.5, {
@@ -217,10 +233,10 @@ var tween = TweenMax.to("#graphdesign_cont", 0.5, {
 });
 
 var scene = new ScrollMagic.Scene({
-  triggerElement: "#graphdesign",
-  triggerHook: 0,
-  duration: "55%"
-  // offset: 1
+  triggerElement: "#trigger-graphdesign",
+  triggerHook: 0.5,
+  duration: "55%",
+  // offset: 120
 })
 
   .setTween(tween)

@@ -192,7 +192,7 @@ $('.projects_thumbs').each(function(){
     .addTo(controller);
 
 
-// ---------------------------------- Scene - blur About scroll icon
+// ---------------------------------- Scene - scrolldown
 
 var controller = new ScrollMagic.Controller();
 
@@ -202,7 +202,7 @@ var Scene0 = new ScrollMagic.Scene({
     triggerHook: 0.4
 
   })
-  .setClassToggle(".scroll-down lottie-player", "blur")
+  .setClassToggle(".scroll-down lottie-player, .about a", "blur")
   // .addIndicators()
   .addTo(controller);
 
@@ -276,9 +276,19 @@ $('.thumbs_mob').slick({
     draggable: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     dots: true,
-    fade: true
+    fade: true,
+
+    responsive: [
+      {
+        breakpoint: 720,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
+
   });
 
 $('#graphdesign_cont').slick({
@@ -313,7 +323,7 @@ $('.smooth').click(function(event) {
 
   $('html,body').delay(100).animate({
     scrollTop: top
-  }, 1000);
+  }, 800);
 
 });
 
@@ -334,6 +344,20 @@ $(".project-background").click(function() {
 
 $(".a").hover(function() {
   $('.b').toggleClass('c');
+});
+
+
+$(".about_trigger").click(
+  function () {
+    $("body").css("overflow-y", "hidden");
+});
+$(".close_popup").click(
+  function () {
+    $("body").css("overflow-y", "");
+});
+$(".project-background").click(
+  function () {
+    $("body").css("overflow-y", "");
 });
 
 

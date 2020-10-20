@@ -4,43 +4,41 @@
 @media all and (max-width: 1600px){
 
   .wrap {
-      display: inline-block;
-      /*margin: 20vmin auto 0;*/
-  }
-  #appMob_cont{
-    /*height: 55vh;*/
-  }
+    display: inline-block;
+    }
+
   #appMob_cont .h{
     top: 0;
-  }
+    }
 
   #webDesign_cont .h span{
-    /*text-align: left;*/
     display: none;
-  }
+    }
 
   #appMob_cont>div:nth-child(1), #appMob_cont>div:nth-child(3) {
 
     width: 25vmin;
     top: 5vmin;
-  }
+    }
 
     .menu_home {
 
       margin: 14vmin auto 15vw;
-    }
+      }
 
     #appMob_cont>div:nth-child(1) {
 
       left: 15vmax;
       left: calc(40vw - 65vh);
-    }
+      }
+
     #appMob_cont>div:nth-child(2) {
 
       width: 31vmin;
       transform: rotateY( 0deg ) rotateX( 0deg ) skew(0deg, 0deg) rotate(0deg);
       border-right: solid #d2cfcf 0px;
-    }
+      }
+
     #appMob_cont>div:nth-child(3) {
 
       right: 15vmax;
@@ -49,9 +47,9 @@
       border-right: solid #d2cfcf 0px;
       border-top: solid #ffffff 7px;
       border-left: solid #fffefe 7px;
-    }
+      }
 
-}
+} /* media 1600px */
 
 /*     1200        1200        1200        1200        1200     */
 
@@ -138,22 +136,29 @@
     padding: 0 10px 30px 10px;
     }
 
+  #graphdesign_cont .slick-slide img {
+
+    width: 100vw;
+    height: auto;
+    }
+
   .projects p, .project_about p {
     padding: 0px 18vw 0 18vw;
     font-size: 18px;
-  }
+    }
 
   .project_about p {
     padding: 100px 110px 100px 110px;
-  }
+    height: 83vh;
+    }
 
   .project_about {
 
     width: 90vw;
     top: 9vh;
-  }
+    }
 
-}
+} /* media 1200px */
 
 /*     720        720        720        720        720     */
 
@@ -234,11 +239,15 @@
   .project_about {
 
     width: 93vw;
+    top: 3vh;
+    height: 95vh;
     }
 
   .project_about p {
 
     height: 96vh;
+    padding: 70px 50px;
+    top: 0vh;
     }
 
   .main_image, .main_image_mob, .main_image_columns {
@@ -318,18 +327,18 @@
     font-size: 3vw;
     width: 95%;
     padding: 2vw 0vw 2vw 0vw;
-    /*margin: 10vw 0 4vw 0;*/
     }
 
-  .slick-slide img {
+  #graphdesign_cont .slick-slide img {
 
-    width: 95vw;
+    width: 100vw;
+    height: auto;
     }
 
     .main_image_mob .slick-slide img {
 
-      width: 69vw;
-      height: auto;
+      /*width: 69vw;*/
+      height: 67vh;
       }
 
     .slick-prev, .slick-next {
@@ -359,4 +368,4 @@
     margin-top: 6vh;
     }
 
-}
+} /* media 720px */

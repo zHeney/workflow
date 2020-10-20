@@ -98,12 +98,14 @@
 
 .project_about {
 
-  position: absolute;
+  overflow: auto;
+  position: relative;
   width: 960px;
   margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 20vh;
+  height: 70vh;
+  top: 15vh;
+  border-radius: 3px;
+  background: white;
   z-index: 101;
   }
 
@@ -111,17 +113,9 @@
 
   margin-top: 0;
   margin-bottom: 0;
-  top: 0;
-  position: absolute;
   padding: 5vw 5vw;
-  border-radius: 3px;
-  background: white;
-  height: 65vh;
-  width: 100%;
-  overflow: auto;
   font-size: 22px;
   letter-spacing: 0;
-  box-shadow: 40px 20px 56px rgba(47, 35, 35, 0.11), 10px 15px 20px rgba(47, 35, 35, 0.02), 3px 4px 5px rgba(47, 35, 35, 0.02);
   }
 
 .project_about p a {
@@ -137,10 +131,9 @@
 
   .close_popup {
 
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 1;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
     }
 
   .project_about>a img{

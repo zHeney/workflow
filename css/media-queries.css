@@ -3,16 +3,24 @@
 
 @media all and (max-width: 1600px){
 
-  .wrap {
+  .workflow_wrap {
+
     display: inline-block;
-    margin: 17vmin auto 0;
+    margin: 10vmin auto 0;
+    }
+
+  .menu_skills {
+
+    margin: 14vmin auto 15vw;
     }
 
   #appMob_cont .h{
+
     top: 0;
     }
 
   #webDesign_cont .h span{
+
     display: none;
     }
 
@@ -21,11 +29,6 @@
     width: 25vmin;
     top: 5vmin;
     }
-
-    .menu_home {
-
-      margin: 14vmin auto 15vw;
-      }
 
     #appMob_cont>div:nth-child(1) {
 
@@ -58,6 +61,10 @@
 
   .moving_effect1:nth-child(2), .moving_effect1:nth-child(3), .moving_effect1:nth-child(4), .moving_effect1:nth-child(5), .moving_effect1:nth-child(6), .moving_effect1:nth-child(7), .moving_effect1:nth-child(8), .moving_effect1:nth-child(9), .moving_effect1:nth-child(10){
     display: none;
+    }
+
+  #menu {
+    width: 445px;
     }
 
   .top_wrap .top_wrap {
@@ -175,7 +182,16 @@
     /*position: relative;*/
     }
 
-  .wrap {
+  #menu {
+    width: 80%;
+    }
+
+  .long-stick-menu:nth-child(2) {
+
+    transform: rotate(-90deg) translateX(0%) translateY(-100%);
+    }
+
+  .workflow_wrap {
 
     margin: 15wmax auto 0;
     }
@@ -193,7 +209,7 @@
     white-space: pre-line;
     }
 
-  .menu_home {
+  .menu_skills {
 
     flex-direction: column;
     font-weight: 300;
@@ -201,7 +217,7 @@
     margin: 0 auto 45vw;
     }
 
-  .menu_home a {
+  .menu_skills a {
 
     padding: 3vw 0vw;
     min-height: unset;
@@ -264,6 +280,12 @@
   footer h1{
 
     font-size: 11px;
+    }
+
+  #socials{
+
+    margin-bottom: 20vw;
+    margin-top: 0
     }
 
   .socials{
@@ -380,3 +402,12 @@
   #trigger-graphdesign { top: 13vh; }
 
 } /* media 720px */
+
+
+/* Minimum aspect ratio */
+@media (min-aspect-ratio: 12/5) {
+
+  #scroll {
+    visibility: hidden;
+    }
+}

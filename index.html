@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <script type="text/javascript" src="js/modernizr-custom.js"></script>
 
 <link rel="stylesheet" href="css/main.css">
@@ -23,24 +24,124 @@
   content="UI, UX, web, mobile, applications, lottie, animations"
 />
 
-<link rel="shortcut icon" href="favicon.ico" />
+<meta
+  name="author"
+  content="zHeney"
+/>
 
-<meta name="author" content="zHeney" />
+<link rel="shortcut icon" href="favicon.ico" />
 
 </head>
 
-<body id="home" style="background: #2f2323;">
+<body id="home"
+  style="
+  background: #2f2323;
+  opacity: 0;
+">
+
+<div id="cover">
+  <lottie-player src="assets/spinner.json" autoplay loop ></lottie-player>
+</div>
+
+<!-- CONTAINER ... CONTAINER ... CONTAINER ... CONTAINER  -->
 
 <div class="container">
 
-<!-- .ANIMATE Workflow TEXT ............................. -->
 
+  <!-- .MENU ... MENU ... MENU ... MENU ... -->
+
+  <div class="long-stick-menu">
+
+    <hr>
+    <a href="#anchor_socials" class="link smooth">Contact</a>
+    <hr>
+
+  </div>
+
+  <div class="long-stick-menu">
+
+    <hr>
+    <a href="#anchor_menu" class="link smooth">Menu</a>
+    <hr>
+
+  </div>
+
+<!-- MAIN-MENU -->
+
+<header id="header">
+  <nav class="nav">
+    <button class="toggle-menu">
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+<div id="menu" class="">
+  <nav class="main-nav">
+    <ul>
+
+      <li>
+        <a href="#">
+          About me
+        </a>
+      </li>
+
+      <li>
+        <a href="#scroll">
+          My skills
+        </a>
+      </li>
+
+      <li>
+        <a href="#anchor_socials">
+          Contacts
+        </a>
+      </li>
+
+      <li>
+        <a href="#WebDesign">
+          Web Design
+        </a>
+      </li>
+
+      <li>
+        <a href="#mob">
+          Mobile Design
+        </a>
+      </li>
+
+      <li>
+        <a href="#animations">
+          Animations
+        </a>
+      </li>
+
+      <li>
+        <a href="#frontend">
+          Frontend
+        </a>
+      </li>
+
+      <li>
+        <a href="#graphdesign">
+          Graphdesign
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+</div>
+<div class="close-menu-square"></div>
+
+
+  <!-- .HEADER ... HEADER ... HEADER ... HEADER ... -->
 
   <div class="top_wrap">
 
     <!-- <div class="radial_gradient"></div> -->
 
-    <div class="wrap" id="anchortop">
+    <div class="workflow_wrap">
       <div class="moving_effect1">Workflow</div>
       <div class="moving_effect1">Workflow</div>
       <div class="moving_effect1">Workflow</div>
@@ -53,12 +154,11 @@
       <div class="moving_effect1">Workflow</div>
     </div>
 
-  <!-- .ABOUT ... ABOUT ... ABOUT ... ABOUT .... ABOUT -->
+    <!-- .ABOUT ... ABOUT ... ABOUT ... ABOUT .... ABOUT -->
 
     <div class="about">
 
-      <p>"Hello!
-      I'm zHeney and I have developed this portfolio site for presentation of my skills and the possibilities that I can provide as IT designer. This site has been designed and built by hand from the ground up."</p>
+      <p>Hello! <span>I'm zHeney</span> and I have developed this portfolio site for presentation of my skills and the possibilities that I can provide as <span>IT designer</span> and has been designed and built by hand from the ground up.</p>
 
       <a href="#scroll" class="smooth">
         <div id="scroll" class="scroll-down">
@@ -73,12 +173,12 @@
   </div>
 
 
-<!-- .MENU SKILLS ... MENU SKILLS ... MENU SKILLS ... MENU SKILLS -->
+  <!-- .I CAN DO IT ... I CAN DO IT ... I CAN DO IT ... I CAN DO IT -->
 
 
   <div class="skills_wrap">
     <h2 id="ican"> I can do it </h2>
-    <div class="menu_home">
+    <div class="menu_skills">
 
       <a href="#WebDesign" class="smooth">UI/UX Web Design</a>
       <a href="#mob" class="smooth">App/Mobile</a>
@@ -90,10 +190,12 @@
   </div>
 
 
-<!-- .SOCIALS ... SOCIALS ... SOCIALS ... SOCIALS ... SOCIALS -->
+  <!-- .SOCIALS ... SOCIALS ... SOCIALS ... SOCIALS ... SOCIALS -->
 
 
   <div id="socials">
+
+    <div id="anchor_socials" class="anchor"></div>
     <canvas id="noise" class="noise"></canvas>
     <div class="socials" style="opacity: 1;">
 
@@ -107,7 +209,7 @@
 
 
 
-<!-- .PROJECTS ... PROJECTS ... PROJECTS ... PROJECTS ... PROJECTS  -->
+  <!-- .PROJECTS ... PROJECTS ... PROJECTS ... PROJECTS ... PROJECTS  -->
 
   <div class="projects">
 
@@ -116,7 +218,7 @@
     <h1 id="WebDesign" class="category " id="web">Web Design</h1>
 
     <p>
-      More than 5 years in the field of web design development, projects from the ground up, wireframes, prototypes, design systems and metrics, sketched notebooks, redesign of existing sites, promotional landing pages and long-term customer support.
+      Experienced in the field of web-design for 5+ years, I’m excited by the large projects from the ground up, constructing the wireframes, testing the prototypes. I usually work with the design systems and metrics, refreshing the existing sites (redesign), grabbing a special attention for promo landing pages and also responsible for long-term customer support.
     </p>
 
 
@@ -204,14 +306,15 @@
     </div>
 
 
-<!-- .APP / MOBILE ... APP ... APP ... APP ... APP ... APP -->
+    <!-- .APP ... APP ... APP ... APP ... APP ... APP -->
 
 
 
     <h1 id="mob" class="category ">App/Mobile</h1>
     <p>
-      4+ years in the development of interfaces for mobile applications on the iOS and Android platforms using such tools as Sketch, Photoshop and Figma. Following the rules
-Human Interface Guidelines and Material Design, creating design systems and UI kits, development of complex prototypes using Invision and Marvel services.
+      4+ years in the development of interfaces for mobile applications on the iOS and Android platforms using such tools as Sketch, Photoshop and Figma. Following the rules of
+Human Interface Guidelines and Material Design, creating design systems and UI kits, developing complex prototypes using Invision and Marvel services.
+
     </p>
 
     <div id="appMob_cont" class="projects_thumbs">
@@ -241,13 +344,13 @@ Human Interface Guidelines and Material Design, creating design systems and UI k
 
 
 
-<!-- .ANIMATIONS (Lottie) ... ANIMATIONS ... ANIMATIONS ... ANIMATIONS -->
+    <!-- .ANIMATIONS ... ANIMATIONS ... ANIMATIONS ... ANIMATIONS -->
 
 
 
     <h1 id="animations" class="category ">Animations</h1>
     <p>
-      Today, modern technologies allow us to animate static web pages and applications using program code, so we can get rid of heavy video and GIF formats. Now our animations look beautiful and uncompressed at any scale. For myself, I chose the wonderful library - Lottie. My whole process of creating animation is divided into the following steps: I make vector illustration, import it into Adobe After Effects and work on my animation there, then I finished it, exporting the animation code and use it on web site or mobile application.
+      Today, modern technologies allow us to animate static web pages and applications using program code, so we can get rid of heavy video and GIF formats. Now our animations look more beautiful and uncompressed at any scale. For myself, I choose the wonderful library - Lottie. My whole process of creating animation is divided into the following steps: I make vector illustration, import it into Adobe After Effects and work on my animation here, then I finish it, export the animation code and use it on a website or mobile application.
     </p>
 
     <div id="animations_cont" class="projects_thumbs">
@@ -272,19 +375,20 @@ Human Interface Guidelines and Material Design, creating design systems and UI k
 
 
 
-<!-- .FRONTEND ... FRONTEND ... FRONTEND ... FRONTEND ... FRONTEND -->
+    <!-- .FRONTEND ... FRONTEND ... FRONTEND ... FRONTEND ... FRONTEND -->
 
 
 
     <h1 id="frontend" class="category ">Frontend</h1>
     <p>
-      Since I studied programming in college in the past, I have some knowledge in development. I support this knowledge to this day and spent a couple months to make own portfolio platform. Why am I doing this? Perhaps I am driven by a passion for reviving my own ideas, a love of experimentation and one or another technological opportunity. But in general, this way certainly opens up ample opportunities for me in communication with programmers and designers, which duly affects the effectiveness of teamwork.
-Below I presented several test works, made in 2016, which show the basic knowledge of a beginner HTML / CSS / JS layout designer.
+      Since I studied programming in college in the past, I have some knowledge in development. I support this knowledge to this day and spent a couple months making my own portfolio platform. Why am I doing this? Perhaps I am driven by a passion for reviving my own ideas, by a love of experimentation and by one or another technological opportunity. But in general, this way certainly opens up ample opportunities for me in communication with programmers and designers, and duly affects the effectiveness of teamwork.
+Below I have presented several simple test works, that show the basic knowledge of a beginner HTML / CSS / JS layout designer.
+
     </p>
 
     <div id="frontend_cont" class="projects_thumbs">
 
-<!-- ............... 1 ................ -->
+      <!-- ............... 1 ................ -->
 
       <div class="frontend_sect">
         <div class="h">
@@ -296,9 +400,7 @@ Below I presented several test works, made in 2016, which show the basic knowled
         <div class="span_wrap">
 
           <span>
-            <a href="frontend/test-g-bootstrap/index.html" target="_blank">
-              <b>Test #1</b>
-            </a>
+            <a href="frontend/test-g-bootstrap/index.html" class="link" target="_blank">Test #1</a>
           </span>
 
           <span>
@@ -308,7 +410,7 @@ Below I presented several test works, made in 2016, which show the basic knowled
         </div>
       </div>
 
-<!-- ............... 2 ................ -->
+      <!-- ............... 2 ................ -->
 
       <div class="frontend_sect">
         <div class="h">
@@ -320,9 +422,7 @@ Below I presented several test works, made in 2016, which show the basic knowled
         <div class="span_wrap">
 
           <span>
-            <a href="frontend/test-p-email/index.html" target="_blank">
-              <b>Test #2</b>
-            </a>
+            <a href="frontend/test-p-email/index.html" class="link" target="_blank">Test #2</a>
           </span>
 
           <span>
@@ -332,7 +432,7 @@ Below I presented several test works, made in 2016, which show the basic knowled
         </div>
       </div>
 
-<!-- ............... 3 ................ -->
+    <!-- ............... 3 ................ -->
 
       <div class="frontend_sect">
         <div class="h">
@@ -344,9 +444,7 @@ Below I presented several test works, made in 2016, which show the basic knowled
         <div class="span_wrap">
 
           <span>
-            <a href="frontend/test-u-films/index.html" target="_blank">
-              <b>Test #3</b>
-            </a>
+            <a href="frontend/test-u-films/index.html" class="link" target="_blank">Test #3</a>
           </span>
 
           <span>
@@ -369,8 +467,9 @@ Below I presented several test works, made in 2016, which show the basic knowled
   <div class="projects graphdesign_wrap">
 
     <h1 id="graphdesign" class="category">GraphDesign</h1>
-    <p style="color: var(--text-color-light);">Graphic design is what my first and main occupation was before becoming a web designer.
-Over the past decade, a lot of work has been done, mainly posters for events and parties, various printed materials, business cards and flyers, logos and branding.
+    <p style="color: var(--text-color-light);">Graphic design is my first and main occupation that was before becoming a web designer.
+Over the past decade, a lot of work has been done, mainly posters for events and parties, various printed materials, business cards and flyers, logos, branding and so on.
+
     </p>
 
     <div id="trigger-graphdesign" class="triggerr"></div>

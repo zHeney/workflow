@@ -1,7 +1,36 @@
 
+  $(window).load(function(){
+  $('#cover').fadeOut(1000);
+});
+
+
+
 ( function( $ ) {
 $( document ).ready(function() {
 
+
+$('#home').addClass('fadeup-category');
+
+
+
+// ----------------------------------- MAIN-MENU
+
+$('.toggle-menu, .long-stick-menu:nth-child(2) a').click (function(){
+  $(this).toggleClass('active');
+  $('#menu').toggleClass('open');
+
+  $('.close-menu-square')
+    .toggleClass('fadeup-category')
+    .toggleClass('visibility-on');
+});
+
+$('.close-menu-square').click (function(){
+  $('#menu').removeClass('open');
+  $(this).removeClass('fadeup-category');
+  $('.toggle-menu').removeClass('active');
+  $(this).toggleClass('visibility-on');
+
+});
 
 // ----------------------------------- TEXT EFFECT
 
@@ -51,7 +80,7 @@ document.addEventListener("mousemove", e => {
 // ---------------------------------- About p fade out - Scene
 
 var controller = new ScrollMagic.Controller();
-var tween = TweenMax.to(".about p", 0.5, {
+var tween = TweenMax.to(".about p, .long-stick-menu .link, .long-stick-menu hr", 0.5, {
   autoAlpha:0,
   yoyo: true
 });
@@ -65,6 +94,44 @@ var scene = new ScrollMagic.Scene({
   .setTween(tween)
   // .addIndicators()
   .addTo(controller);
+
+// ---------------------------------- Scrolldown icon in header - Scene
+
+var controller = new ScrollMagic.Controller();
+
+var Scene0 = new ScrollMagic.Scene({
+    triggerElement: "#trigger-about",
+    // duration: "15%",
+    triggerHook: 0.4
+
+  })
+  .setClassToggle(".scroll-down lottie-player, .about a", "to-blur")
+  // .addIndicators()
+  .addTo(controller);
+
+// ---------------------------------- TranslateY to up I CAN DO wrap - Scene
+
+  var Skills = new ScrollMagic.Scene({
+      triggerElement: ".skills_wrap",
+      triggerHook: 0.8,
+      // duration: "90%"
+
+    })
+    .setClassToggle(".skills_wrap, #header", "fadeup")
+    // .addIndicators()
+    .addTo(controller);
+
+// ---------------------------------- unblur I CAN DO text - Scene
+
+  var Skills = new ScrollMagic.Scene({
+      triggerElement: ".skills_wrap",
+      triggerHook: 0.8,
+      // duration: "90%"
+
+    })
+    .setClassToggle(".skills_wrap h2", "unblur")
+    // .addIndicators()
+    .addTo(controller);
 
 // ---------------------------------- Blur SOC - Scene
 
@@ -195,32 +262,6 @@ $('.projects_thumbs').each(function(){
     .addTo(controller);
 });
 
-// ---------------------------------- TranslateY to up I CAN DO - Scene
-
-  var Skills = new ScrollMagic.Scene({
-      triggerElement: ".skills_wrap",
-      triggerHook: 0.8,
-      // duration: "90%"
-
-    })
-    .setClassToggle(".skills_wrap", "fadeup")
-    // .addIndicators()
-    .addTo(controller);
-
-
-// ---------------------------------- Scrolldown in header - Scene
-
-var controller = new ScrollMagic.Controller();
-
-var Scene0 = new ScrollMagic.Scene({
-    triggerElement: "#trigger-about",
-    // duration: "15%",
-    triggerHook: 0.4
-
-  })
-  .setClassToggle(".scroll-down lottie-player, .about a", "blur")
-  // .addIndicators()
-  .addTo(controller);
 
 // ---------------------------------- Graphdesign section effect - Scene
 
@@ -244,7 +285,8 @@ var scene = new ScrollMagic.Scene({
   .addTo(controller);
 
 
-// ----------------------------------- SLICK SLIDER
+
+// SLICK SLIDER
 
 $('.thumbnails').slick({
   asNavFor: '.main_image',

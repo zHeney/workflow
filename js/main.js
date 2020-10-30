@@ -1,16 +1,11 @@
 
-  $(window).load(function(){
-  $('#cover').fadeOut(1000);
-});
-
-
+$(window).load(function(){ $('#cover').fadeOut(1000); });
 
 ( function( $ ) {
 $( document ).ready(function() {
 
 
 $('#home').addClass('fadeup-category');
-
 
 
 // ----------------------------------- MAIN-MENU
@@ -73,6 +68,24 @@ document.addEventListener("mousemove", e => {
   });
 });
 
+// ------- Toggle More
+
+
+$("#webDesign_sect .more").click(function() {
+  $('#webDesign_sect .about-text-category').toggleClass('height-auto');
+});
+$("#appMob_sect .more").click(function() {
+  $('#appMob_sect .about-text-category').toggleClass('height-auto');
+});
+$("#animations_sect .more").click(function() {
+  $('#animations_sect .about-text-category').toggleClass('height-auto');
+});
+$("#frontend_sect .more").click(function() {
+  $('#frontend_sect .about-text-category').toggleClass('height-auto');
+});
+$("#graphdesign_sect .more").click(function() {
+  $('#graphdesign_sect .about-text-category').toggleClass('height-auto');
+});
 
 
 // SCROLL MAGIC
@@ -212,7 +225,7 @@ var BG = new ScrollMagic.Scene({
   .addTo(controller);
 
 
-// ---------------------------------- Undelining WebDesign - Scene
+// ---------------------------------- Undelining - Scene
 
 $('.category').each(function(){
 
@@ -220,8 +233,8 @@ $('.category').each(function(){
 
   var Scene4 = new ScrollMagic.Scene({
       triggerElement: this,
-      triggerHook: 0.7,
-      duration: "90%"
+      triggerHook: 0.7
+      // duration: "90%"
       // reverse: false
 
     })
@@ -233,7 +246,7 @@ $('.category').each(function(){
 // ---------------------------------- Scrolling fade opacity to 1 - Scene
 
 
-$('.category, .projects p').each(function(){
+$('.category, .projects p, .more').each(function(){
 
   var Scene4 = new ScrollMagic.Scene({
       triggerElement: this,
@@ -284,7 +297,7 @@ var scene = new ScrollMagic.Scene({
   // .addIndicators()
   .addTo(controller);
 
-
+// --------------------------------------------------------------------
 
 // SLICK SLIDER
 
@@ -334,14 +347,16 @@ $('.thumbs_mob').slick({
     draggable: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+    draggable: true,
     arrows: true,
-    dots: true,
+    dots: false,
     fade: true,
 
     responsive: [
       {
         breakpoint: 720,
         settings: {
+          dots: true,
           arrows: false
         }
       }
@@ -385,7 +400,22 @@ $('.smooth').click(function(event) {
 
 });
 
+// ------------------------------------------------SINGLE PAGES
 
+//----------------------------------- minimize header
+
+// $(window).scroll(function() {
+//     var y_scroll_pos = window.pageYOffset;
+//     var scroll_pos_test = 100;
+
+//     if(y_scroll_pos > scroll_pos_test) {
+//      $(".header").css({ 'transform' : 'scale(0.5)', 'width' : '200vw' });
+//     }
+//   else
+//   {
+//     $(".header").css({ 'transform' : 'scale(1)', 'width' : '100vw' });
+//   }
+// });
 
 //----------------------------------- Popup about
 

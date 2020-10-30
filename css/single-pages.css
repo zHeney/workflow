@@ -3,6 +3,7 @@
 .header {
 
   min-height: 120px;
+  width: 100vw;
   top: 0;
   left: 0;
   right: 0;
@@ -15,6 +16,8 @@
   flex-wrap: wrap;
   align-items: center;
   box-sizing: border-box;
+  transform-origin: left top;
+  transition: var(--cubic-transition-05s);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 0 5px 20px rgba(20, 19, 19, 0.03), 0 3px 5px rgba(20, 19, 19, 0.03);
   }
 
@@ -83,7 +86,7 @@
   z-index: 100;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.4s ease-out;
+  transition: var(--cubic-transition-05s);
   }
 
 .project-background {
@@ -113,7 +116,7 @@
 
   margin-top: 0;
   margin-bottom: 0;
-  padding: 5vw 5vw;
+  padding: 4vw 5vw;
   font-size: 22px;
   letter-spacing: 0;
   }
@@ -132,8 +135,8 @@
   .close_popup {
 
     float: right;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
     }
 
   .project_about>a img{

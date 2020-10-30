@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --text-color-light: lightgrey;
@@ -8,13 +8,14 @@
 
   --cubic-transition-20s: 2s cubic-bezier(.26,.45,.5,1.04);
   --cubic-transition-15s: 1.5s cubic-bezier(.26,.45,.5,1.04);
-  --cubic-transition-05s: 0.5s cubic-bezier(.26,.45,.5,1.04);
+  --cubic-transition-05s: 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
 
   --item-transform-03s: all 0.3s ease-out, background-position 1s cubic-bezier(.26,.45,.5,1.04) 500ms;
 
   --red: #ff5353;
   --blue: #0f9bcc;
   --brown: #2f2323;
+  --unibrown: #796e6e;
 
   }
 
@@ -79,8 +80,8 @@ h4 {
 body {
 
   position: relative;
-  /*overflow-y: overlay !important;*/
   min-height: 100%;
+  overflow-x: hidden;
   font-family: 'Kanit', sans-serif;
 
   -webkit-user-select: none;
@@ -91,6 +92,11 @@ body {
   transition: opacity var(--cubic-transition-20s);
   }
 
+body:not(#home) {
+
+  overflow-y: overlay;
+  }
+
 a { text-decoration: none }
 
 a:link, a:visited, a:active {
@@ -98,7 +104,24 @@ a:link, a:visited, a:active {
   color: var(--text-color-greydark);
   }
 
+p, .frontend_sect div span {
+  -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
 :focus { outline: 0; }
+
+::-moz-selection {
+  color: var(--text-color-light);
+  background: var(--brown);
+}
+
+::selection {
+  color: var(--text-color-light);
+  background: var(--brown);
+}
 
 .link {
 
@@ -108,6 +131,7 @@ a:link, a:visited, a:active {
   display: inline;
   text-transform: uppercase;
   letter-spacing: 3px;
+  cursor: pointer;
  }
 
 /* --------------------------- HOMEPAGE -----------------------------*/
@@ -158,7 +182,7 @@ a:link, a:visited, a:active {
 #menu {
   background: #ffffffde;
   height: 100%;
-  right: 0;
+  right: -1px;
   opacity: 0;
   overflow: hidden;
   position: fixed;
@@ -296,7 +320,7 @@ a:link, a:visited, a:active {
 .toggle-menu span {
   content: "";
   display: block;
-  height: 2px;
+  height: 0;
   left: calc(50% - 13px );
   position: absolute;
   top: calc(50% - 1px );
@@ -322,10 +346,10 @@ a:link, a:visited, a:active {
   width: 26px;
 }
 .toggle-menu span:before {
-  top: 7px;
+  top: 3px;
 }
 .toggle-menu span:after {
-  top: -7px;
+  top: -3px;
 }
 .toggle-menu.active span {
   background-color: transparent;
@@ -405,15 +429,16 @@ a:link, a:visited, a:active {
   width: 50vh;
   border: 0;
   height: 1px;
-  background: var(--text-color-light);
+  background: var(--unibrown);
   opacity: 0.4;
   margin: 0px 10px;
+  box-shadow: 1px 1px var(--brown);
   animation-delay: 4.5s;
   }
 
 .long-stick-menu a{
 
-  color: var(--text-color-light);
+  color: var(--unibrown);
   }
 
 .long-stick-menu:nth-child(2) a {
@@ -841,7 +866,7 @@ a:link, a:visited, a:active {
 /* ------ WEB ------ WEB ------ WEB ------ WEB ------ WEB ------ WEB -------*/
 
 
-.projects .category { margin-bottom: 15vw; }
+.projects .category { margin-bottom: 7vw; }
 
 .category {
 
@@ -849,6 +874,8 @@ a:link, a:visited, a:active {
   opacity: 0;
   margin-left: auto;
   margin-right: auto;
+  width: fit-content;
+
   }
 
   .category:before, .undrline-active:before {
@@ -888,24 +915,46 @@ a:link, a:visited, a:active {
 .projects p{
 
   opacity: 0;
-  transition: opacity var(--cubic-transition-20s);
+  max-height: 110px;
+  padding: 0px 27vw;
+  letter-spacing: 0.3px;
+  font-size: 24px;
+  margin-bottom: 20px;
+
+  transition: opacity var(--cubic-transition-20s), max-height var(--cubic-transition-05s);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 50%);
+  mask-image: linear-gradient(to top, transparent 0%, black 50%);
   }
+
+  .projects section { justify-content: space-between; }
+
+  .projects .more {
+
+    opacity: 0;
+    color: var(--unibrown);
+    letter-spacing: 1px;
+
+    transition-delay: 0.5s;
+    transition: var(--cubic-transition-05s);
+    }
+
+    .projects .more:hover{
+
+      color: var(--brown);
+      letter-spacing: 2px;
+      }
+
 
 .projects p, .project_about p {
 
-  margin-top: -8vw;
-  margin-bottom: 13vw;
-  padding: 0px 22vw;
   font-weight: 200;
-  letter-spacing: 0.3px;
-  font-size: 24px;
+  overflow: hidden;
   }
 
 .projects_thumbs {
 
   transform: translateY(100px);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 13vw auto 0;
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -977,7 +1026,7 @@ a:link, a:visited, a:active {
     }
 
 
-/* ------ WED DESIGN------ WED DESIGN------ WED DESIGN------ WED DESIGN -------*/
+/* ------ WED DESIGN ------ */
 
 
 
@@ -1042,7 +1091,7 @@ a:link, a:visited, a:active {
 
 
 
-/* ------ APP / MOBILE ------ APP / MOBILE ------ APP / MOBILE ------ APP / MOBILE -------*/
+/* ------ APP / MOBILE ------ */
 
 
 
@@ -1137,7 +1186,7 @@ a:link, a:visited, a:active {
 
 
 
-/* ------ ANIMATIONS (Lottie) -------*/
+/* ------ ANIMATIONS (Lottie) ------- */
 
 
 
@@ -1181,7 +1230,7 @@ a:link, a:visited, a:active {
 
 
 
-/* ------ FRONTEND -------*/
+/* ------ FRONTEND ------- */
 
 
 
@@ -1247,7 +1296,7 @@ a:link, a:visited, a:active {
     }
 
 
-/* ------ GRAPHDESIGN ---- GRAPHDESIGN ---- GRAPHDESIGN ---- GRAPHDESIGN ------*/
+/* ------ GRAPHDESIGN ------ */
 
 
 .graphdesign_wrap{
@@ -1268,9 +1317,13 @@ a:link, a:visited, a:active {
   background: linear-gradient(270deg, rgba(16,155,203,1) 0%, rgba(60,112,168,1) 50%, rgba(247,24,25,1) 100%);
   }
 
+.graphdesign_wrap .more { color: #3479af; }
+.graphdesign_wrap .more:hover { color: #338ed6; }
+
 #graphdesign_cont {
 
   opacity: 0;
+  margin-top: 13vw;
   /*transform: matrix(1, 0, 0, 1, 300, 0);*/
   }
 
@@ -1402,6 +1455,13 @@ body{
 
   background: #0e0e0e !important;
   transition: background var(--cubic-transition-15s);
+  }
+
+.height-auto {
+
+  max-height: 500px !important;
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 0%) !important;
+  mask-image: linear-gradient(to top, transparent 0%, black 0%) !important;
   }
 
 .anchor { position: absolute; }

@@ -149,8 +149,14 @@
   .projects p, .project_about p {
     padding: 0px 18vw;
     font-size: 18px;
-    max-height: 110px;
+    /*max-height: 110px;*/
     }
+
+  .projects .about-text-category {
+
+    padding: 0px 13vw;
+    font-size: 22px;
+   }
 
   .project_about p {
     padding: 100px 110px;
@@ -250,13 +256,24 @@
     align-items: center;
     }
 
+  .projects .about-text-category {
+
+    padding: 0 10vw;
+    font-size: 19px;
+   }
+
   .projects p {
 
     margin-top: 3vw;
-    padding: 0px 13vw;
+    padding: 0 13vw;
     letter-spacing: 0px;
     font-size: 4.8vw;
     }
+
+    .height-auto {
+
+      max-height: 700px !important;
+      }
 
   .project_about {
 
@@ -276,7 +293,7 @@
 
     padding-top: 30px;
     padding-bottom: 126px;
-    margin-top: 0px;
+    margin-top: 0;
     }
 
   footer h1{
@@ -287,7 +304,7 @@
   #socials{
 
     margin-bottom: 20vw;
-    margin-top: 0
+    margin-top: 0;
     }
 
   .socials{

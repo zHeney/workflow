@@ -88,6 +88,22 @@ $("#graphdesign_sect .more").click(function() {
 });
 
 
+// ------- calculate paragraph height
+
+// var itemHeight = $('#webDesign_sect .about-text-category').css( "height" );
+
+// $("#webDesign_sect .more").click(function() {
+//   $('#webDesign_sect .about-text-category').toggleClass('height-auto');
+// });
+
+// $("#webDesign_sect .more").toggle(function() {
+
+//     $('#webDesign_sect .about-text-wrap').css("height", itemHeight);
+//   }, function () {
+//     $('#webDesign_sect .about-text-wrap').css("height", "110px");
+//   });
+
+
 // SCROLL MAGIC
 
 // ---------------------------------- About p fade out - Scene
@@ -513,3 +529,10 @@ $("#button").click(function() {
       .velocity("transition.slideUpIn", { stagger: 250 }, 1250)
       .delay(650);
 */
+
+
+// active on click
+  // $('li').on('click', function(){
+  //   $('li').removeClass('active');
+  //   $(this).addClass('active');
+  // });

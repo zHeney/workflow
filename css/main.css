@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --text-color-light: lightgrey;
@@ -247,8 +246,8 @@ p, .frontend_sect div span {
           animation-delay: 1s;
 }
 #menu.open li {
-  -webkit-animation-duration: 1.0s;
-          animation-duration: 1.0s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-name: fadeInUp;
@@ -912,7 +911,16 @@ p, .frontend_sect div span {
   justify-content: space-between;
   }
 
-.projects p{
+.projects section { justify-content: space-between; }
+
+/*.projects .about-text-wrap{
+  height: 110px;
+  overflow: hidden;
+  transition: var(--cubic-transition-05s);
+  margin-bottom: 20px;
+}
+*/
+.projects .about-text-category{
 
   opacity: 0;
   max-height: 110px;
@@ -922,11 +930,18 @@ p, .frontend_sect div span {
   margin-bottom: 20px;
 
   transition: opacity var(--cubic-transition-20s), max-height var(--cubic-transition-05s);
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 50%);
-  mask-image: linear-gradient(to top, transparent 0%, black 50%);
+
+      -webkit-mask-image: linear-gradient(to top, transparent, black);
+      mask-image: linear-gradient(to top, transparent, black);
+
   }
 
-  .projects section { justify-content: space-between; }
+  .height-auto {
+
+    -webkit-mask-image: linear-gradient(180deg, black, black) !important;
+    max-height: 500px !important;
+
+    }
 
   .projects .more {
 
@@ -1457,12 +1472,7 @@ body{
   transition: background var(--cubic-transition-15s);
   }
 
-.height-auto {
 
-  max-height: 500px !important;
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 0%) !important;
-  mask-image: linear-gradient(to top, transparent 0%, black 0%) !important;
-  }
 
 .anchor { position: absolute; }
 

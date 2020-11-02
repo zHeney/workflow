@@ -83,9 +83,18 @@ $("#animations_sect .more").click(function() {
 $("#frontend_sect .more").click(function() {
   $('#frontend_sect .about-text-category').toggleClass('height-auto');
 });
-$("#graphdesign_sect .more").click(function() {
-  $('#graphdesign_sect .about-text-category').toggleClass('height-auto');
-});
+// $("#graphdesign_sect .more").click(function() {
+//   $('#graphdesign_sect .about-text-category').toggleClass('height-auto');
+// });
+
+$("#graphdesign_sect .more").toggle(function() {
+
+    $('#graphdesign_sect .about-text-category').css("max-height", "230px");
+    $('#graphdesign_sect .about-text-category').css("-webkit-mask-image", "linear-gradient(180deg, black, black)");
+  }, function () {
+    $('#graphdesign_sect .about-text-category').css("max-height", "110px");
+    $('#graphdesign_sect .about-text-category').css("-webkit-mask-image", "linear-gradient(to top, transparent, black)");
+  });
 
 
 // ------- calculate paragraph height

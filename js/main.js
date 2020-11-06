@@ -425,6 +425,11 @@ $('.smooth').click(function(event) {
 
 });
 
+// app/mobile item motion compensator
+$(".a").hover(function() {
+  $('.b').toggleClass('c');
+});
+
 // ------------------------------------------------SINGLE PAGES
 
 //----------------------------------- minimize header
@@ -452,11 +457,6 @@ $(".close_popup").click(function() {
 });
 $(".project-background").click(function() {
   $('.project_wrap').removeClass('about_show');
-});
-
-
-$(".a").hover(function() {
-  $('.b').toggleClass('c');
 });
 
 

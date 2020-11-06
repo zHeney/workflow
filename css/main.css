@@ -115,11 +115,13 @@ p, .frontend_sect div span {
 ::-moz-selection {
   color: var(--text-color-light);
   background: var(--brown);
+  text-shadow: -0.06em 0.06em 0 rgb(15 155 204 / 50%), 0.06em 0.06em 0 rgb(255 83 83 / 50%);
 }
 
 ::selection {
   color: var(--text-color-light);
   background: var(--brown);
+  text-shadow: -0.06em 0.06em 0 rgb(15 155 204 / 50%), 0.06em 0.06em 0 rgb(255 83 83 / 50%);
 }
 
 .link {
@@ -997,7 +999,7 @@ p, .frontend_sect div span {
   background-position-y: 2vw;
   background-color: #ffffff;
   transition: var(--item-transform-03s);
-  transform: rotateY( -2deg ) rotateX( 10deg ) skew(2deg, 2deg) rotate(2deg);
+  transform: rotateY( -2deg ) scale3d(1, 1, 1) rotateX( 10deg ) skew(2deg, 2deg) rotate(2deg);
   border-right: solid #d2cfcf 7px;
   border-top: solid #ffffff 7px;
   box-shadow: 40px 20px 56px rgba(47, 35, 35, 0.11), 10px 15px 20px rgba(47, 35, 35, 0.02), 3px 4px 5px rgba(47, 35, 35, 0.02), inset 0px 2px white;
@@ -1005,7 +1007,7 @@ p, .frontend_sect div span {
 
   .h:hover {
 
-    transform: rotateY( 0deg ) rotateX( 0deg ) skew(0deg, 0deg) rotate(0deg);
+    transform: rotateY( 0deg ) scale3d(0.99, 0.99, 0.99) rotateX( 0deg ) skew(0deg, 0deg) rotate(0deg);
     border-right: solid #d2cfcf 0;
     border-top: solid #ffffff 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 0 3px 5px rgba(20, 19, 19, 0.03), 0 1px 1px rgba(20, 19, 19, 0.03), inset 0em 2px white;
@@ -1309,6 +1311,13 @@ p, .frontend_sect div span {
     font-weight: bold;
     font-size: 22px;
     color: #2f232352;
+    transition: var(--cubic-transition-05s);
+    }
+
+  .frontend_sect div span .link:hover {
+
+    letter-spacing: 2.3px;
+    color: var(--text-color-dark)
     }
 
 

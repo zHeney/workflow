@@ -115,7 +115,7 @@ $("#graphdesign_sect .more").toggle(function() {
 
 // SCROLL MAGIC
 
-// ---------------------------------- About p fade out - Scene
+// ---------------------------------- Header - About p fade out - Scene
 
 var controller = new ScrollMagic.Controller();
 var tween = TweenMax.to(".about p, .long-stick-menu .link, .long-stick-menu hr", 0.5, {

@@ -1520,3 +1520,9 @@ body {
   #trigger-socials { top: 0; }
   #trigger-graphdesign { top: 63vh; }
 
+.hiddenlink{
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.1;
+  text-decoration: underline;
+}

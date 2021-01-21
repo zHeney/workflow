@@ -425,7 +425,7 @@
 
 
 /* Minimum aspect ratio */
-@media (min-aspect-ratio: 12/5) {
+@media (min-aspect-ratio: 12/6) {
 
   #scroll {
     visibility: hidden;

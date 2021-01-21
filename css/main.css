@@ -577,7 +577,7 @@ p, .frontend_sect div span {
 .about {
 
   width: 45vw;
-  margin: 8vh auto 25vh;
+  margin: 6vh auto 25vh;
   opacity: 0;
 
   animation: fadein 10s ease-out;

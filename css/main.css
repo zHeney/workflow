@@ -1056,7 +1056,7 @@ p, .frontend_sect div span {
 
 #webDesign_cont>div:nth-child(1) {
 
-  background-image: url(../img/Envista/thumb.png);
+  background-image: url(../img/Citizen/thumb.png);
   }
 
 #webDesign_cont>div:nth-child(1):hover {
@@ -1090,7 +1090,7 @@ p, .frontend_sect div span {
 
 #webDesign_cont>div:nth-child(5)
   {
-    background-image: url(../img/Citizen/thumb.png);
+    background-image: url(../img/Envista/thumb.png);
   }
 
   #webDesign_cont>div:nth-child(5):hover {

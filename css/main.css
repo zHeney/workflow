@@ -120,7 +120,7 @@ p, .frontend_sect div span {
 
 ::selection {
   color: var(--text-color-light);
-  background: var(--brown);
+  background: #0e0e0e;
   text-shadow: -0.06em 0.06em 0 rgb(15 155 204 / 50%), 0.06em 0.06em 0 rgb(255 83 83 / 50%);
 }
 

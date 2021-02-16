@@ -5,8 +5,8 @@
   --text-color-dark: #2f2323;
   --text-color-greydark: #262B31;
 
-  --cubic-transition-20s: 2s cubic-bezier(.26,.45,.5,1.04);
-  --cubic-transition-15s: 1.5s cubic-bezier(.26,.45,.5,1.04);
+  --cubic-transition-20s: 1.3s cubic-bezier(.26,.45,.5,1.04);
+  --cubic-transition-15s: 1s cubic-bezier(.26,.45,.5,1.04);
   --cubic-transition-05s: 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
 
   --item-transform-03s: all 0.3s ease-out, background-position 1s cubic-bezier(.26,.45,.5,1.04) 500ms;
@@ -156,7 +156,7 @@ p, .frontend_sect div span {
   position: fixed;
   right: 0;
   width: 50px;
-  z-index: 10011;
+  z-index: 1103;
   opacity: 0;
   transition: var(--cubic-transition-05s);
 }
@@ -197,8 +197,8 @@ p, .frontend_sect div span {
   z-index: 1102;
   backdrop-filter: blur(21px);
 
-  animation: fadein 1s ease-out;
-  animation-delay: 2s;
+  animation: fadein 0.5s ease-out;
+  animation-delay: 0.5s;
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
@@ -208,63 +208,63 @@ p, .frontend_sect div span {
   transform: translateX(0);
 }
 #menu.open li:nth-child(1) {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+#menu.open li:nth-child(2) {
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
-#menu.open li:nth-child(2) {
+#menu.open li:nth-child(3) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+#menu.open li:nth-child(4) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-#menu.open li:nth-child(3) {
+#menu.open li:nth-child(5) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+#menu.open li:nth-child(6) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-#menu.open li:nth-child(4) {
+#menu.open li:nth-child(7) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+#menu.open li:nth-child(8) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-#menu.open li:nth-child(5) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-#menu.open li:nth-child(6) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-#menu.open li:nth-child(7) {
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-#menu.open li:nth-child(8) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
 #menu.open li:nth-child(9) {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
 }
 #menu.open li:nth-child(10) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 #menu.open li {
-  -webkit-animation-duration: 1.0s;
-          animation-duration: 1.0s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-name: fadeInUp;
           animation-name: fadeInUp;
 }
 #menu ul:hover a {
-  opacity: 0.5;
+  opacity: 1;
 }
 #menu ul a {
   -webkit-transform: translateZ(0);
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  transition: letter-spacing var(--cubic-transition-05s);
+  -webkit-transition: letter-spacing var(--cubic-transition-05s);
 }
 #menu ul a:hover {
-  opacity: 1;
+  letter-spacing: 2px;
 }
 #menu .main-nav {
   position: relative;
@@ -308,8 +308,8 @@ p, .frontend_sect div span {
   transform: rotate(90deg);
   z-index: 1110;
 
-  animation: fadein 2s ease-out;
-  animation-delay: 2s;
+  animation: fadein 1s ease-out;
+  animation-delay: 1s;
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
@@ -419,8 +419,8 @@ p, .frontend_sect div span {
   justify-content: center;
 
 
-  animation: fadein 10s ease-out;
-  animation-delay: 4s;
+  animation: fadein 5s ease-out;
+  animation-delay: 3s;
   animation-direction: normal;
   animation-fill-mode: forwards;
   }
@@ -440,6 +440,13 @@ p, .frontend_sect div span {
 .long-stick-menu a{
 
   color: var(--unibrown);
+  transition: letter-spacing var(--cubic-transition-05s);
+  -webkit-transition: letter-spacing var(--cubic-transition-05s);
+  }
+
+.long-stick-menu a:hover{
+
+  letter-spacing: 4px;
   }
 
 .long-stick-menu:nth-child(2) a {
@@ -581,7 +588,7 @@ p, .frontend_sect div span {
   opacity: 0;
 
   animation: fadein 10s ease-out;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-direction: normal;
   animation-fill-mode: forwards;
   }
@@ -613,7 +620,7 @@ p, .frontend_sect div span {
   right: 0;
 
   animation: fadein 10s ease-out;
-  animation-delay: 5s;
+  animation-delay: 3s;
   animation-direction: normal;
   animation-fill-mode: forwards;
   }

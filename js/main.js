@@ -143,7 +143,7 @@ var Scene0 = new ScrollMagic.Scene({
     triggerHook: 0.4
 
   })
-  .setClassToggle(".scroll-down lottie-player, .about a", "to-blur")
+  .setClassToggle(".scroll-down lottie-player", "to-blur")
   // .addIndicators()
   .addTo(controller);
 

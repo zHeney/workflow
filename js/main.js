@@ -125,7 +125,7 @@ var tween = TweenMax.to(".about p, .long-stick-menu .link, .long-stick-menu hr",
 
 var scene = new ScrollMagic.Scene({
   triggerElement: ".about p",
-  triggerHook: 0.3,
+  triggerHook: 0.2,
   duration: "55%"
 })
 

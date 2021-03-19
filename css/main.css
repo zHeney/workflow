@@ -1154,9 +1154,14 @@ p, .frontend_sect div span {
   align-items: center;
   }
 
+  #appMob_cont img{
+    opacity: 0;
+  }
+
   #appMob_cont .h {
 
     margin-bottom: 0;
+    overflow: hidden;
     position: unset;
     padding: 0.3vw;
     border-radius: 2.5vw;
@@ -1185,7 +1190,9 @@ p, .frontend_sect div span {
     margin-bottom: 1vmin;
     border-top: solid #ffffff 7px;
     }
+
     #appMob_cont .c{
+
       margin-top: 1vmin;
       margin-bottom: 1vmin;
       }
@@ -1196,13 +1203,45 @@ p, .frontend_sect div span {
     border-top: solid #ffffff 7px;
     }
 
+  #appMob_cont .h a{
+
+    border-radius: 1.7vw;
+    }
+
+  #appMob_cont>div a{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-position 0.5s cubic-bezier(.26,.45,.5,1.04) 200ms;
+    }
+
+  #appMob_cont>div:nth-child(1) a{
+
+    background-image: url(../img/WondrinApp/portfolio/preview.png);
+    }
+  #appMob_cont>div:nth-child(2) a{
+
+    background-image: url(../img/NavyIland/Web-App-NavyIsland/App/Portfolio/preview.jpg);
+    }
+  #appMob_cont>div:nth-child(3) a{
+
+    background-image: url(../img/WorldstoresApp/portfolio/preview.png);
+    }
+
+  #appMob_cont>div a:hover{
+
+    background-position-x: 100%;
+
+    }
+
   #appMob_cont>div:nth-child(1), #appMob_cont>div:nth-child(3) {
 
     width: 30vh;
     }
 
   #appMob_cont>div:nth-child(1) {
-      margin-right: 7vh;
+
+    margin-right: 7vh;
     }
 
   #appMob_cont>div:nth-child(2) {

@@ -1104,10 +1104,10 @@ p, .frontend_sect div span {
 
 #post6
   {
-    background-image: url(../img/NavyIland/thumb.png);
+    background-image: url(../img/NavyIland/preview.jpg);
   }
   #post6:hover {
-    background-position-y: 2.3vw;
+    background-position-y: 0.7vw;
   }
 
 #post5

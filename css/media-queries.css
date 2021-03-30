@@ -314,6 +314,23 @@
     line-height: 2;
     }
 
+    .socials a:hover{
+
+      color: inherit;
+      letter-spacing: inherit;
+
+      }
+
+    #socials .fb-inst {
+
+      margin-top: 10px;
+      }
+
+    .icons a {
+      margin: 0 10px;
+      transform: scale(0.8, 0.8);
+      }
+
   .m-socials {
     filter: blur(0px);
     transform: scale(0.8);
@@ -349,7 +366,7 @@
 
   #appMob_cont .h img{
 
-    width: 95%;
+    width: 100%;
     }
 
   #animations_cont lottie-player {
@@ -413,7 +430,12 @@
 
   .main_image_columns {
 
-    column-width: 100px;
+    column-width: 130px;
+    }
+
+    .main_image_columns img {
+
+    border-radius: 6px;
     }
 
   #prototype {

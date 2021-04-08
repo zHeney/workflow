@@ -4,6 +4,17 @@ $(window).load(function(){ $('#cover').fadeOut(1000); });
 ( function( $ ) {
 $( document ).ready(function() {
 
+/* Delete hash
+
+// remove fragment as much as it can go without adding an entry in browser history:
+window.location.replace("#");
+
+// slice off the remaining '#' in HTML5:
+if (typeof window.history.replaceState == 'function') {
+
+  history.replaceState({}, '', window.location.href.slice(0, -1));
+}
+*/
 
 $('#home').addClass('fadeup-category');
 
@@ -424,6 +435,25 @@ $('.smooth').click(function(event) {
   }, 800);
 
 });
+
+$('.smooth_fast').click(function(event) {
+
+  // $(this).mousedown(function(){
+  //   setTimeout(function(){ $(this).mouseup(); }, 5000);
+  // });
+
+  event.preventDefault();
+  var href=$(this).attr('href');
+  var target=$(href);
+  var top=target.offset().top;
+
+  $('html,body').animate({
+    scrollTop: top
+  }, 200);
+
+});
+
+// ------------------------------------------------
 
 // app/mobile item motion compensator
 $(".a").hover(function() {

@@ -1088,6 +1088,13 @@ p, .frontend_sect div span {
   width: 44%;
   }
 
+#post8 {
+  background-image: url(../img/IXS/thumb.png);
+  }
+  #post8:hover {
+    background-position-y: -2.7vw;
+  }
+
 #post7 {
   background-image: url(../img/GDP-Test/Map.png);
   }
@@ -1126,14 +1133,14 @@ p, .frontend_sect div span {
     background-position-y: 0.7vw;
   }
 
-/*#post3
+#post3
   {
     background-image: url(../img/Envista/thumb.png);
   }
   #post3:hover {
     background-position-y: -51vw;
   }
-*/
+
 #post2 {
     background-image: url(../img/Ek/thumb.png);
   }

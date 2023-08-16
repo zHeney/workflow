@@ -144,6 +144,7 @@ p, .frontend_sect div span {
   text-align: center;
   overflow: hidden;
   position: relative;
+  max-width: 100%;
   }
 
 .container h1 {
